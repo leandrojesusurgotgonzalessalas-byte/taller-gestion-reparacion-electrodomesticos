@@ -1,0 +1,14 @@
+@model RepairStatus
+@{
+    var style = Model switch {
+        RepairStatus.Recibido => ("st-diag", "i-box"),
+        RepairStatus.EnRevision => ("st-diag", "i-search"),
+        RepairStatus.EsperandoAprobacion => ("st-espera", "i-clock"),
+        RepairStatus.EsperandoRepuesto => ("st-espera", "i-clock"),
+        RepairStatus.EnReparacion => ("st-rep", "i-wrench"),
+        RepairStatus.Reparado => ("st-listo", "i-check"),
+        RepairStatus.Entregado => ("st-entregado", "i-box-done"),
+        _ => ("st-cancelado", "i-alert")
+    };
+}
+<span class="badge-st @style.Item1"><svg class="ico" aria-hidden="true"><use href="#@style.Item2"/></svg>@Labels.Status(Model)</span>

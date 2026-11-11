@@ -1,0 +1,45 @@
+@model string
+@{
+    var catalogo = new (string Equipo, string[] Piezas)[] {
+        ("Refrigerador / Heladera / Nevera", ["Compresor", "Termostato", "Burlete de puerta"]),
+        ("Congelador / Freezer", ["Termostato", "Burlete de puerta", "Ventilador"]),
+        ("Frigobar", ["Termostato", "Relé de arranque", "Burlete de puerta"]),
+        ("Cocina / Estufa", ["Hornalla", "Perilla de mando", "Termocupla"]),
+        ("Hornos", ["Resistencia", "Termostato", "Burlete de puerta"]),
+        ("Horno de microondas", ["Plato giratorio", "Motor del plato", "Fusible"]),
+        ("Campana extractora / Extractor de humos", ["Filtro de grasa", "Filtro de carbón", "Motor extractor"]),
+        ("Vitrocerámica o encimera", ["Resistencia radiante", "Selector de potencia", "Placa de control"]),
+        ("Lavadora / Lavarropas", ["Bomba de desagüe", "Electroválvula", "Correa"]),
+        ("Secadora / Secarropas", ["Correa", "Resistencia", "Filtro de pelusas"]),
+        ("Lavavajillas / Lavaplatos", ["Bomba de desagüe", "Bomba de circulación", "Cesta de cubiertos"]),
+        ("Aire acondicionado", ["Filtro de aire", "Control remoto", "Capacitor"]),
+        ("Termotanque / Termo eléctrico / Calefón", ["Resistencia", "Termostato", "Válvula de seguridad"]),
+        ("Calefactores y estufas", ["Resistencia", "Perilla de mando", "Termostato"])
+    };
+}
+@if (Model == "equipos")
+{
+    <datalist id="tiposElectrodomesticos">
+        @foreach (var categoria in catalogo) { <option value="@categoria.Equipo"></option> }
+    </datalist>
+}
+else
+{
+    <div class="field">
+        <label for="equipoReferenciaPieza">Equipo de referencia</label>
+        <select id="equipoReferenciaPieza" class="form-select" aria-describedby="ayudaCatalogoPiezas">
+            <option value="">Todos los equipos</option>
+            @foreach (var categoria in catalogo) { <option value="@categoria.Equipo">@categoria.Equipo</option> }
+        </select>
+        <small id="ayudaCatalogoPiezas">Filtra las sugerencias del nombre de la pieza. También puedes escribir una pieza diferente.</small>
+    </div>
+    <datalist id="piezasElectrodomesticos">
+        @foreach (var categoria in catalogo)
+        {
+            @foreach (var pieza in categoria.Piezas)
+            {
+                <option value="@(pieza + " — " + categoria.Equipo)" data-equipo="@categoria.Equipo"></option>
+            }
+        }
+    </datalist>
+}

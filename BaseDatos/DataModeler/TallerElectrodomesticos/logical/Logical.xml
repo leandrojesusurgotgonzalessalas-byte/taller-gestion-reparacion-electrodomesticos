@@ -1,0 +1,884 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="ModeloLogicoTaller" id="34585A8E-BC93-6D59-4EDB-730A696CE94A" mainViewID="6D7E3190-A32D-E7B4-A4A0-A8CA332B7A1F">
+  <createdBy>Samira</createdBy>
+  <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+  <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+  <shouldBeOpen>true</shouldBeOpen>
+  <mainView class="oracle.dbtools.crest.swingui.logical.DPVLogical" id="6D7E3190-A32D-E7B4-A4A0-A8CA332B7A1F" name="ModeloLogicoTaller">
+    <createdBy>Samira</createdBy>
+    <modifiedBy>Samira</modifiedBy>
+    <createdTime>2026-10-14 14:46:02 UTC</createdTime>
+    <autoRoute>false</autoRoute>
+    <boxInbox>true</boxInbox>
+    <showLegend>false</showLegend>
+    <showLabels>false</showLabels>
+    <showRelAttributes>false</showRelAttributes>
+    <gridEnabled>false</gridEnabled>
+    <showGrid>false</showGrid>
+    <diagramColor>-1</diagramColor>
+    <display>true</display>
+    <notation>1</notation>
+    <objectViews>
+      <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="357C395D-395A-40D6-B429-2447D441A418" otype="Entity" vid="FC81BC36-DA45-4D43-B197-4CDF45CB571E">
+        <bounds x="50" y="40" width="370" height="236" />
+      </OView>
+      <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="FCDC4E3E-5B4F-4668-BE89-8858F17A162B" otype="Entity" vid="0BF3F50D-AA94-4498-BF95-FDEDF5FC7212">
+        <bounds x="970" y="40" width="370" height="210" />
+      </OView>
+      <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="22F39320-BAC9-4771-991D-732CB9FFB3A1" otype="Entity" vid="B9ECCBC4-F4E0-40D7-89FA-BACC8E160619">
+        <bounds x="510" y="40" width="370" height="288" />
+      </OView>
+      <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="1A962323-CE06-45DD-AC16-0E30E0ECBD64" otype="Entity" vid="BF489E15-6668-4CC1-9CAC-C8D8C54E0263">
+        <bounds x="1490" y="800" width="370" height="184" />
+      </OView>
+      <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="DE01DD25-BAD3-47FB-B8DD-331B3BF892F8" otype="Entity" vid="003FD15D-3166-4547-9490-1FC3260E027E">
+        <bounds x="970" y="430" width="370" height="522" />
+      </OView>
+      <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="42B32633-85AF-4EDA-B7A8-4680F044A602" otype="Entity" vid="BC263E07-ACB7-4200-9788-656B6B2A46D7">
+        <bounds x="970" y="1300" width="370" height="210" />
+      </OView>
+      <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="1AC6B292-227C-470F-A203-D0DDD9584E5F" otype="Entity" vid="5EF050F4-47B1-4190-A856-01811A589386">
+        <bounds x="1490" y="430" width="370" height="236" />
+      </OView>
+      <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="C06F42B3-8C6B-4186-8055-1387B202E63E" otype="Entity" vid="750F6631-82CF-4C55-9812-186ED3D0B12A">
+        <bounds x="50" y="1300" width="370" height="236" />
+      </OView>
+      <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="C1A1E72A-D972-442C-ACE5-5023985FEF78" otype="Entity" vid="723C389F-662F-4729-8136-669BC2E501D8">
+        <bounds x="510" y="1300" width="370" height="288" />
+      </OView>
+      <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="5584C2E1-0206-4A1E-B010-43C457CB61F0" otype="Entity" vid="B0DEF806-9616-42A4-A2C9-759D75AB050B">
+        <bounds x="50" y="430" width="370" height="262" />
+      </OView>
+    </objectViews>
+    <connectors>
+      <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="FBC51C76-9AD5-4AF9-B27F-B01FDCFF2FD4" otype="Relation" vid_source="FC81BC36-DA45-4D43-B197-4CDF45CB571E" vid_target="B9ECCBC4-F4E0-40D7-89FA-BACC8E160619">
+        <lineWidth>1</lineWidth>
+        <points>
+          <point x="420" y="180" />
+          <point x="510" y="180" />
+        </points>
+      </Connector>
+      <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="1083F812-9A3A-4F2C-A460-BDDE8FA05622" otype="Relation" vid_source="003FD15D-3166-4547-9490-1FC3260E027E" vid_target="BF489E15-6668-4CC1-9CAC-C8D8C54E0263">
+        <lineWidth>1</lineWidth>
+        <points>
+          <point x="1340" y="910" />
+          <point x="1490" y="910" />
+        </points>
+      </Connector>
+      <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="7A48D3A5-8612-42DA-9D23-E7C56D7CDC85" otype="Relation" vid_source="0BF3F50D-AA94-4498-BF95-FDEDF5FC7212" vid_target="003FD15D-3166-4547-9490-1FC3260E027E">
+        <lineWidth>1</lineWidth>
+        <points>
+          <point x="1155" y="250" />
+          <point x="1155" y="430" />
+        </points>
+      </Connector>
+      <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="54896830-6C22-482A-A1B9-26BFD8C4824C" otype="Relation" vid_source="B9ECCBC4-F4E0-40D7-89FA-BACC8E160619" vid_target="003FD15D-3166-4547-9490-1FC3260E027E">
+        <lineWidth>1</lineWidth>
+        <points>
+          <point x="880" y="200" />
+          <point x="925" y="200" />
+          <point x="925" y="560" />
+          <point x="970" y="560" />
+        </points>
+      </Connector>
+      <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="0E28568C-DC91-40C0-8FDC-3567AAA5BB0D" otype="Relation" vid_source="003FD15D-3166-4547-9490-1FC3260E027E" vid_target="BC263E07-ACB7-4200-9788-656B6B2A46D7">
+        <lineWidth>1</lineWidth>
+        <points>
+          <point x="1155" y="952" />
+          <point x="1155" y="1300" />
+        </points>
+      </Connector>
+      <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="E40F00C8-696B-4AB7-A8A4-EFC14B770D07" otype="Relation" vid_source="723C389F-662F-4729-8136-669BC2E501D8" vid_target="BC263E07-ACB7-4200-9788-656B6B2A46D7">
+        <lineWidth>1</lineWidth>
+        <points>
+          <point x="880" y="1430" />
+          <point x="970" y="1430" />
+        </points>
+      </Connector>
+      <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="30D8AF0C-3A33-45FE-BE75-D0520143DF6F" otype="Relation" vid_source="750F6631-82CF-4C55-9812-186ED3D0B12A" vid_target="723C389F-662F-4729-8136-669BC2E501D8">
+        <lineWidth>1</lineWidth>
+        <points>
+          <point x="420" y="1430" />
+          <point x="510" y="1430" />
+        </points>
+      </Connector>
+      <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="BF70A707-F6B1-4F36-94BD-0EC44984A276" otype="Relation" vid_source="003FD15D-3166-4547-9490-1FC3260E027E" vid_target="5EF050F4-47B1-4190-A856-01811A589386">
+        <lineWidth>1</lineWidth>
+        <points>
+          <point x="1340" y="550" />
+          <point x="1490" y="550" />
+        </points>
+      </Connector>
+    </connectors>
+  </mainView>
+  <Entities>
+    <Entity class="oracle.dbtools.crest.model.design.logical.Entity" id="357C395D-395A-40D6-B429-2447D441A418" name="Cliente" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <normalForm>Third</normalForm>
+      <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+      <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+        <Attribute id="4F5F8D49-D139-43C9-B13F-73DD179F7E0B" name="Id">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="847515F7-76AF-4B27-932D-7FAF77362240" name="Name">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="C9A6AC13-D25C-49D1-A6D7-AADB93CE0990" name="Phone">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>C55155D9-3DB0-3152-8985-44DDF8C7A393</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="28A8EED2-55DE-4731-8748-D0ADBFC775F1" name="Address">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>9CF591A8-12E6-A402-A1B2-E9CB4FA4AC2F</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="37C3BE58-C204-43FE-819C-6F23C737F4A2" name="Email">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="AE65B5D1-6EDF-4750-B5E3-BED97CF7B146" name="Active">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT034</logicalDatatype>
+          <domain>05925330-378F-025A-005F-5904AA3924C9</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+      </attributes>
+      <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+        <identifier id="2046E0A5-E16B-4698-B806-C056B9CDC4B8" name="PK_Clientes">
+          <pk>true</pk>
+          <usedAttributes>
+            <attributeRef>4F5F8D49-D139-43C9-B13F-73DD179F7E0B</attributeRef>
+          </usedAttributes>
+        </identifier>
+      </identifiers>
+    </Entity>
+    <Entity class="oracle.dbtools.crest.model.design.logical.Entity" id="FCDC4E3E-5B4F-4668-BE89-8858F17A162B" name="Empleado" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <normalForm>Third</normalForm>
+      <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+      <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+        <Attribute id="5468E1FC-67F8-4A4D-B83D-A11AA1285848" name="Id">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="2E5E5802-DDDA-4922-B120-018897A43E84" name="Name">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="382C5A66-B919-4DC3-AB75-A0AA54678E55" name="Phone">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>C55155D9-3DB0-3152-8985-44DDF8C7A393</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="03E6F646-24E7-4585-8BC6-4014106A19AF" name="Specialty">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="DCCD4167-2C55-496C-B156-F5A89A07271D" name="Active">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT034</logicalDatatype>
+          <domain>05925330-378F-025A-005F-5904AA3924C9</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+      </attributes>
+      <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+        <identifier id="2497658D-910C-46F5-B1FE-89A0C10100A2" name="PK_Empleados">
+          <pk>true</pk>
+          <usedAttributes>
+            <attributeRef>5468E1FC-67F8-4A4D-B83D-A11AA1285848</attributeRef>
+          </usedAttributes>
+        </identifier>
+      </identifiers>
+    </Entity>
+    <Entity class="oracle.dbtools.crest.model.design.logical.Entity" id="22F39320-BAC9-4771-991D-732CB9FFB3A1" name="Electrodoméstico" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <normalForm>Third</normalForm>
+      <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+      <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+        <Attribute id="DCF05509-710B-4BF7-AE4A-F8147861C7FB" name="Id">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="0F7AEC05-A141-4B44-9669-A8491F856BF3" name="CustomerId">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="F038DAD5-F064-44BE-B9DD-DB245D4A9B79" name="Type">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>2A62824F-7C93-B4C5-12C7-328EA9892A0B</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="DDA1D034-2503-4A39-AC42-FBE3B98D8D17" name="Brand">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>2A62824F-7C93-B4C5-12C7-328EA9892A0B</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="C2573722-54D9-4BC8-855A-E035DBD8C469" name="Model">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>E1120D19-FCF7-A730-2514-21DF5622ABC3</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="072AC537-9912-4BD5-A141-1C8DB47EAE57" name="Serial">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="46384E0F-3824-426A-9179-79D7A8DEC9A1" name="Accessories">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>AD92FD6B-ED91-5244-9BED-2AFC8C1AD6A2</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="EA103EC3-60D3-4FA2-AA4D-B824187F2CC1" name="Active">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT034</logicalDatatype>
+          <domain>05925330-378F-025A-005F-5904AA3924C9</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+      </attributes>
+      <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+        <identifier id="16363B54-B8CD-4561-AF2C-7B0D5722FB42" name="PK_Equipos">
+          <pk>true</pk>
+          <usedAttributes>
+            <attributeRef>DCF05509-710B-4BF7-AE4A-F8147861C7FB</attributeRef>
+          </usedAttributes>
+        </identifier>
+      </identifiers>
+    </Entity>
+    <Entity class="oracle.dbtools.crest.model.design.logical.Entity" id="1A962323-CE06-45DD-AC16-0E30E0ECBD64" name="Evento de orden" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <normalForm>Third</normalForm>
+      <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+      <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+        <Attribute id="2F4E0148-1AEE-4DC8-BF21-51C1D08C2B43" name="Id">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="55FCCD23-609C-40EB-8762-860E917257EF" name="RepairOrderId">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="47946848-1CB7-4734-8C77-C190327E9F39" name="Description">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>2ADAC536-DE49-AC76-4B6A-54B3FCF26761</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="4F69A8FC-12D4-4DF5-AF9E-1F054D1E4EB3" name="CreatedAt">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+          <domain>507F51C6-22D8-C23D-550E-ADEF364B1098</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+      </attributes>
+      <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+        <identifier id="58B55FDF-DE31-4F57-8080-9D4EB2448F85" name="PK_HistorialOrdenes">
+          <pk>true</pk>
+          <usedAttributes>
+            <attributeRef>2F4E0148-1AEE-4DC8-BF21-51C1D08C2B43</attributeRef>
+          </usedAttributes>
+        </identifier>
+      </identifiers>
+    </Entity>
+    <Entity class="oracle.dbtools.crest.model.design.logical.Entity" id="DE01DD25-BAD3-47FB-B8DD-331B3BF892F8" name="Orden de reparación" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <normalForm>Third</normalForm>
+      <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+      <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+        <Attribute id="F2A5F651-FA10-4252-B2BC-AF6C616083F9" name="Id">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="F081DDEE-98FD-41FD-8E92-3F579F11E6FC" name="EquipmentId">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="FF129B83-A75E-4A8A-9DAA-66368BA28B9D" name="ServiceMode">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="2F97090C-D8EE-4F8D-9B61-D005148CB5DB" name="ServiceAddress">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>AD92FD6B-ED91-5244-9BED-2AFC8C1AD6A2</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="2B274C93-0924-4EA3-8C85-7268090DA87E" name="EmployeeId">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="BAEE1EF7-372C-4E87-A799-D5B8F597DD63" name="ReceivedAt">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+          <domain>507F51C6-22D8-C23D-550E-ADEF364B1098</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="A09DEBD7-5774-445D-B30E-6BE55BDCD72D" name="UpdatedAt">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+          <domain>507F51C6-22D8-C23D-550E-ADEF364B1098</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="6EE2551D-45A6-407D-90CC-3FD78275098B" name="DueDate">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+          <domain>507F51C6-22D8-C23D-550E-ADEF364B1098</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="2DC04E0B-BC1C-46C5-B31A-9FAFF1AAF801" name="ReportedFault">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>2EF26F6B-27EB-9E27-CD56-80B8B40683F5</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="60FD3C8A-6DC0-420E-B9D3-BF0D07E46558" name="Diagnosis">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>61E2890C-31B9-53EB-F3F1-D535204B2574</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="15130EAF-7052-4C88-9AF6-855C6F63033A" name="Technician">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="D3A470E7-11E8-4927-B025-AC8AF40B07F4" name="Status">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="E5788314-7D85-4C21-9F98-D3F757A24C9B" name="Labor">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT026</logicalDatatype>
+          <domain>9FE4B3C3-7DA4-C030-9E02-53D46A87B47A</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="A3E6DC31-A3C3-461D-BC51-D38904E2BE91" name="BudgetApproved">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT034</logicalDatatype>
+          <domain>05925330-378F-025A-005F-5904AA3924C9</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="B0F9355D-0F37-4AC7-BA72-88884D68C42C" name="Notes">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>61E2890C-31B9-53EB-F3F1-D535204B2574</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="B884F5EF-8FAB-4D7D-8C4F-863FE28CA42D" name="DeliveredAt">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+          <domain>507F51C6-22D8-C23D-550E-ADEF364B1098</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="9701B5CD-E8DA-43EC-8661-E8FCA7C4731D" name="RowVersion">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT033</logicalDatatype>
+          <domain>928AF5E7-3A24-5608-62B5-B488DC7C25A0</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+      </attributes>
+      <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+        <identifier id="9664C067-4DC5-449A-AE17-6A2260A0F288" name="PK_Ordenes">
+          <pk>true</pk>
+          <usedAttributes>
+            <attributeRef>F2A5F651-FA10-4252-B2BC-AF6C616083F9</attributeRef>
+          </usedAttributes>
+        </identifier>
+      </identifiers>
+    </Entity>
+    <Entity class="oracle.dbtools.crest.model.design.logical.Entity" id="42B32633-85AF-4EDA-B7A8-4680F044A602" name="Repuesto utilizado" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <normalForm>Third</normalForm>
+      <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+      <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+        <Attribute id="ED9401FD-17BE-41F6-9ACE-76BA5823563F" name="Id">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="C3D92962-06D5-4B9D-B8E3-0B1B6044720E" name="RepairOrderId">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="8310DA84-8143-4A59-B7BF-E762B415AD96" name="PartId">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="DFFE4ADC-6407-4E34-AE4F-3C2D8AB9CC84" name="Quantity">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="F012FAAC-FC0F-4E0F-9431-0250DBC0C951" name="UnitPrice">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT026</logicalDatatype>
+          <domain>9FE4B3C3-7DA4-C030-9E02-53D46A87B47A</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+      </attributes>
+      <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+        <identifier id="F4A7B3E8-8F17-45A1-BED7-8565800D7E0A" name="PK_OrdenRepuestos">
+          <pk>true</pk>
+          <usedAttributes>
+            <attributeRef>ED9401FD-17BE-41F6-9ACE-76BA5823563F</attributeRef>
+          </usedAttributes>
+        </identifier>
+      </identifiers>
+    </Entity>
+    <Entity class="oracle.dbtools.crest.model.design.logical.Entity" id="1AC6B292-227C-470F-A203-D0DDD9584E5F" name="Pago" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <normalForm>Third</normalForm>
+      <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+      <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+        <Attribute id="5DB3DCAC-DBB5-494A-B60C-4B360F405B41" name="Id">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="1FBD7A52-5932-49D1-A491-CA76591BA38C" name="RepairOrderId">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="0722AA10-9023-4254-80C9-D7339138216D" name="Amount">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT026</logicalDatatype>
+          <domain>9FE4B3C3-7DA4-C030-9E02-53D46A87B47A</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="A8E744B4-9AAC-4DE5-9DD3-971753E315A8" name="Method">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>C55155D9-3DB0-3152-8985-44DDF8C7A393</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="80FC0FDF-9D07-46DE-BAE9-1E12E5080E14" name="Reference">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="3AEABB22-5632-4482-8430-E0EEC8D77BB3" name="PaidAt">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+          <domain>507F51C6-22D8-C23D-550E-ADEF364B1098</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+      </attributes>
+      <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+        <identifier id="58B7F03D-2A70-4B99-85E3-BA2613AA7645" name="PK_Pagos">
+          <pk>true</pk>
+          <usedAttributes>
+            <attributeRef>5DB3DCAC-DBB5-494A-B60C-4B360F405B41</attributeRef>
+          </usedAttributes>
+        </identifier>
+      </identifiers>
+    </Entity>
+    <Entity class="oracle.dbtools.crest.model.design.logical.Entity" id="C06F42B3-8C6B-4186-8055-1387B202E63E" name="Proveedor" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <normalForm>Third</normalForm>
+      <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+      <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+        <Attribute id="B199EFB1-63A8-48F8-B541-BC5B8C798390" name="Id">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="406A160B-C8FA-43F8-B318-F99F05CDE452" name="Name">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>61605E55-ABCD-E690-8312-45D4E29067F7</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="89508431-E8FF-4871-98F2-C5312A014AF7" name="Phone">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>C55155D9-3DB0-3152-8985-44DDF8C7A393</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="31DEE6B2-E06D-4CF1-9477-F267AC8F2337" name="Address">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>9CF591A8-12E6-A402-A1B2-E9CB4FA4AC2F</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="1868842E-4B3D-4338-9AA4-C2F4CD39B686" name="Contact">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="F06182BA-1F8A-4197-B906-CBA8787FA5DC" name="Active">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT034</logicalDatatype>
+          <domain>05925330-378F-025A-005F-5904AA3924C9</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+      </attributes>
+      <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+        <identifier id="DFDDDA94-D7CB-4472-8D09-CB27293839B0" name="PK_Proveedores">
+          <pk>true</pk>
+          <usedAttributes>
+            <attributeRef>B199EFB1-63A8-48F8-B541-BC5B8C798390</attributeRef>
+          </usedAttributes>
+        </identifier>
+      </identifiers>
+    </Entity>
+    <Entity class="oracle.dbtools.crest.model.design.logical.Entity" id="C1A1E72A-D972-442C-ACE5-5023985FEF78" name="Repuesto" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <normalForm>Third</normalForm>
+      <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+      <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+        <Attribute id="D872FB84-D83C-4D93-BB7C-7C742E34A838" name="Id">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="D4602DAE-A0EE-46A2-B0E8-2F67768D21C1" name="SupplierId">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="EC83D31A-3171-4179-B5B1-F9717C42C79F" name="Code">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>0D1F9DB7-E8A7-2386-7EDE-EEBC909BD379</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="481EE5BC-DBC7-40E7-B408-ACF8D787FCB1" name="Name">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>61605E55-ABCD-E690-8312-45D4E29067F7</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="D0790CCE-1F4D-40FA-B897-C8FED0FAB93F" name="Stock">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="2F5EDD32-ADE1-4F25-AAB8-2CE2862820F4" name="Price">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT026</logicalDatatype>
+          <domain>9FE4B3C3-7DA4-C030-9E02-53D46A87B47A</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="3400526A-28E7-447E-A95F-D4D9A9CA7181" name="Active">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT034</logicalDatatype>
+          <domain>05925330-378F-025A-005F-5904AA3924C9</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="BD319527-2C6E-4FEC-8D50-6D2E2F04A560" name="RowVersion">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT033</logicalDatatype>
+          <domain>928AF5E7-3A24-5608-62B5-B488DC7C25A0</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+      </attributes>
+      <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+        <identifier id="9349E54C-B52E-4AA2-8655-7A8B2480D935" name="PK_Repuestos">
+          <pk>true</pk>
+          <usedAttributes>
+            <attributeRef>D872FB84-D83C-4D93-BB7C-7C742E34A838</attributeRef>
+          </usedAttributes>
+        </identifier>
+        <identifier id="6EEAC66B-8C98-491A-96E3-D53206AB5FC6" name="IX_Repuestos_Code">
+          <pk>false</pk>
+          <usedAttributes>
+            <attributeRef>EC83D31A-3171-4179-B5B1-F9717C42C79F</attributeRef>
+          </usedAttributes>
+        </identifier>
+      </identifiers>
+    </Entity>
+    <Entity class="oracle.dbtools.crest.model.design.logical.Entity" id="5584C2E1-0206-4A1E-B010-43C457CB61F0" name="Egreso" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <normalForm>Third</normalForm>
+      <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+      <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+        <Attribute id="41DE6605-D1CB-4802-A2F3-72227CB9E83A" name="Id">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="3BBE5B84-570A-4DCB-A4D2-2F771945A7A6" name="Description">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>9CF591A8-12E6-A402-A1B2-E9CB4FA4AC2F</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="7E0A45BE-9E53-4380-AC3C-F1D86B16083A" name="Kind">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT011</logicalDatatype>
+          <domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="3343503E-B634-4004-A0FD-C0F1F3B6F4B0" name="Amount">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT026</logicalDatatype>
+          <domain>9FE4B3C3-7DA4-C030-9E02-53D46A87B47A</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="679EBB07-DE02-400E-A957-67ECC2BDE244" name="Date">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>LOGDT007</logicalDatatype>
+          <domain>8626ABD9-EFEA-AEAA-4552-C499C72AE040</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="20B333BB-7550-4E0D-BE6D-5CA5843536F5" name="Reference">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <nullsAllowed>true</nullsAllowed>
+          <use>0</use>
+          <logicalDatatype>LOGDT037</logicalDatatype>
+          <domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+        <Attribute id="BF6688B4-7F7B-4A86-BA81-93C09D3ABBB7" name="CreatedAt">
+          <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+          <use>0</use>
+          <logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+          <domain>507F51C6-22D8-C23D-550E-ADEF364B1098</domain>
+          <ownDataTypeParameters>,,</ownDataTypeParameters>
+        </Attribute>
+      </attributes>
+      <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+        <identifier id="92804BC6-E1AD-42F8-9071-14660A8DC6CA" name="PK_Egresos">
+          <pk>true</pk>
+          <usedAttributes>
+            <attributeRef>41DE6605-D1CB-4802-A2F3-72227CB9E83A</attributeRef>
+          </usedAttributes>
+        </identifier>
+      </identifiers>
+    </Entity>
+  </Entities>
+  <Relationships>
+    <Relationship class="oracle.dbtools.crest.model.design.logical.Relation" id="FBC51C76-9AD5-4AF9-B27F-B01FDCFF2FD4" name="FK_Equipos_Clientes_CustomerId" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <identifying>false</identifying>
+      <optionalSource>false</optionalSource>
+      <optionalTarget>true</optionalTarget>
+      <sourceCardinality>1</sourceCardinality>
+      <sourceEntity>357C395D-395A-40D6-B429-2447D441A418</sourceEntity>
+      <targetCardinalityString>*</targetCardinalityString>
+      <targetEntity>22F39320-BAC9-4771-991D-732CB9FFB3A1</targetEntity>
+      <transferable>true</transferable>
+    </Relationship>
+    <Relationship class="oracle.dbtools.crest.model.design.logical.Relation" id="1083F812-9A3A-4F2C-A460-BDDE8FA05622" name="FK_HistorialOrdenes_Ordenes_RepairOrderId" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <identifying>false</identifying>
+      <optionalSource>false</optionalSource>
+      <optionalTarget>true</optionalTarget>
+      <sourceCardinality>1</sourceCardinality>
+      <sourceEntity>DE01DD25-BAD3-47FB-B8DD-331B3BF892F8</sourceEntity>
+      <targetCardinalityString>*</targetCardinalityString>
+      <targetEntity>1A962323-CE06-45DD-AC16-0E30E0ECBD64</targetEntity>
+      <transferable>true</transferable>
+    </Relationship>
+    <Relationship class="oracle.dbtools.crest.model.design.logical.Relation" id="7A48D3A5-8612-42DA-9D23-E7C56D7CDC85" name="FK_Ordenes_Empleados_EmployeeId" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <identifying>false</identifying>
+      <optionalSource>true</optionalSource>
+      <optionalTarget>true</optionalTarget>
+      <sourceCardinality>1</sourceCardinality>
+      <sourceEntity>FCDC4E3E-5B4F-4668-BE89-8858F17A162B</sourceEntity>
+      <targetCardinalityString>*</targetCardinalityString>
+      <targetEntity>DE01DD25-BAD3-47FB-B8DD-331B3BF892F8</targetEntity>
+      <transferable>true</transferable>
+    </Relationship>
+    <Relationship class="oracle.dbtools.crest.model.design.logical.Relation" id="54896830-6C22-482A-A1B9-26BFD8C4824C" name="FK_Ordenes_Equipos_EquipmentId" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <identifying>false</identifying>
+      <optionalSource>false</optionalSource>
+      <optionalTarget>true</optionalTarget>
+      <sourceCardinality>1</sourceCardinality>
+      <sourceEntity>22F39320-BAC9-4771-991D-732CB9FFB3A1</sourceEntity>
+      <targetCardinalityString>*</targetCardinalityString>
+      <targetEntity>DE01DD25-BAD3-47FB-B8DD-331B3BF892F8</targetEntity>
+      <transferable>true</transferable>
+    </Relationship>
+    <Relationship class="oracle.dbtools.crest.model.design.logical.Relation" id="0E28568C-DC91-40C0-8FDC-3567AAA5BB0D" name="FK_OrdenRepuestos_Ordenes_RepairOrderId" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <identifying>false</identifying>
+      <optionalSource>false</optionalSource>
+      <optionalTarget>true</optionalTarget>
+      <sourceCardinality>1</sourceCardinality>
+      <sourceEntity>DE01DD25-BAD3-47FB-B8DD-331B3BF892F8</sourceEntity>
+      <targetCardinalityString>*</targetCardinalityString>
+      <targetEntity>42B32633-85AF-4EDA-B7A8-4680F044A602</targetEntity>
+      <transferable>true</transferable>
+    </Relationship>
+    <Relationship class="oracle.dbtools.crest.model.design.logical.Relation" id="E40F00C8-696B-4AB7-A8A4-EFC14B770D07" name="FK_OrdenRepuestos_Repuestos_PartId" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <identifying>false</identifying>
+      <optionalSource>false</optionalSource>
+      <optionalTarget>true</optionalTarget>
+      <sourceCardinality>1</sourceCardinality>
+      <sourceEntity>C1A1E72A-D972-442C-ACE5-5023985FEF78</sourceEntity>
+      <targetCardinalityString>*</targetCardinalityString>
+      <targetEntity>42B32633-85AF-4EDA-B7A8-4680F044A602</targetEntity>
+      <transferable>true</transferable>
+    </Relationship>
+    <Relationship class="oracle.dbtools.crest.model.design.logical.Relation" id="30D8AF0C-3A33-45FE-BE75-D0520143DF6F" name="FK_Repuestos_Proveedores_SupplierId" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <identifying>false</identifying>
+      <optionalSource>true</optionalSource>
+      <optionalTarget>true</optionalTarget>
+      <sourceCardinality>1</sourceCardinality>
+      <sourceEntity>C06F42B3-8C6B-4186-8055-1387B202E63E</sourceEntity>
+      <targetCardinalityString>*</targetCardinalityString>
+      <targetEntity>C1A1E72A-D972-442C-ACE5-5023985FEF78</targetEntity>
+      <transferable>true</transferable>
+    </Relationship>
+    <Relationship class="oracle.dbtools.crest.model.design.logical.Relation" id="BF70A707-F6B1-4F36-94BD-0EC44984A276" name="FK_Pagos_Ordenes_RepairOrderId" directorySegmentName="seg_0">
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <identifying>false</identifying>
+      <optionalSource>false</optionalSource>
+      <optionalTarget>true</optionalTarget>
+      <sourceCardinality>1</sourceCardinality>
+      <sourceEntity>DE01DD25-BAD3-47FB-B8DD-331B3BF892F8</sourceEntity>
+      <targetCardinalityString>*</targetCardinalityString>
+      <targetEntity>1AC6B292-227C-470F-A203-D0DDD9584E5F</targetEntity>
+      <transferable>true</transferable>
+    </Relationship>
+  </Relationships>
+</LogicalDesign>

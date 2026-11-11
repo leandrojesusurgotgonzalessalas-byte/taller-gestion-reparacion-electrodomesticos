@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "tool": "Oracle SQL Developer Data Modeler 24.3.1",
+  "nativeResult": "RESULTADO: true true tablas=10 clavesForaneas=8 entidades=10 relaciones=8",
+  "tables": 10,
+  "columns": 72,
+  "foreignKeys": 8,
+  "logicalEntities": 10,
+  "logicalRelationships": 8,
+  "connectorCrossings": 0,
+  "relationsAndRoutesUnchanged": true,
+  "sqlServerDatabase": "TallerElectrodomesticos",
+  "comparison": "Nombres, tipos y nulabilidad del esquema de referencia, tablas y relaciones de SQL Server; PK, índice y dos restricciones de Egresos.",
+  "scope": "Documentación; se consultó el catálogo SQL Server sin modificar datos ni esquema.",
+  "rowVersionMapping": "binary(8) documental; rowversion en SQL Server"
+}

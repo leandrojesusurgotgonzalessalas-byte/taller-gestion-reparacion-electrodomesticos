@@ -1,0 +1,162 @@
+@model List<RepairOrder>
+@using System.Globalization
+@using Microsoft.AspNetCore.Html
+@{
+    ViewData["Title"] = "Inicio";
+    var es = new CultureInfo("es-BO");
+    var activasModel = Model.Where(x => x.Status != RepairStatus.Entregado && x.Status != RepairStatus.Cancelado).ToList();
+    var activas = activasModel.Count;
+    var enTaller = activasModel.Count(x => x.ServiceMode == ServiceMode.Taller);
+    var aDomicilio = activasModel.Count(x => x.ServiceMode == ServiceMode.Domicilio);
+    var listos = Model.Count(x => x.Status == RepairStatus.Reparado);
+    var listosConSaldo = Model.Count(x => x.Status == RepairStatus.Reparado && x.Balance > 0);
+    decimal cobrosHoy = (decimal)ViewBag.TodayPayments;
+    var hoy = Labels.Local(DateTime.UtcNow).Date;
+    var pagosHoy = Model.SelectMany(x => x.Payments).Count(x => Labels.Local(x.PaidAt).Date == hoy);
+    decimal saldoPorCobrar = activasModel.Sum(x => x.Balance);
+    var ordenesConSaldo = activasModel.Count(x => x.Balance > 0);
+    var reparaciones = Model.Take(8).ToList();
+    var stockBajo = (int)ViewBag.LowStock;
+    string Bs(decimal v) => "Bs " + v.ToString("N2", es);
+    IHtmlContent Ico(string id) => Html.Raw($"<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#{id}\"/></svg>");
+}
+
+<div class="page-head">
+    <div>
+        <h1>Inicio</h1>
+        <p>Resumen del taller: lo más importante de hoy.</p>
+    </div>
+    @* Alta mediante la acción existente Orders/Create. *@
+    <a class="btn btn-primary btn-cta" asp-controller="Orders" asp-action="Create">
+        @Ico("i-plus")Nueva orden
+    </a>
+</div>
+
+<section class="section quick panel" aria-labelledby="h-quick">
+    <h2 class="section-label" id="h-quick">Accesos rápidos</h2>
+    <div class="quick-actions">
+        <a class="btn btn-soft" asp-controller="Customers" asp-action="Edit">@Ico("i-user-plus")Registrar cliente</a>
+        <a class="btn btn-soft" asp-controller="Equipment"  asp-action="Edit">@Ico("i-appliance")Registrar equipo</a>
+        <a class="btn btn-soft" asp-controller="Parts"   asp-action="Edit">@Ico("i-box")Registrar pieza</a>
+    </div>
+</section>
+
+@if (stockBajo > 0)
+{
+    @* El controlador entrega el conteo de existencias <= 2; no expone nombres ni mínimos configurables. *@
+    <section class="section notice" aria-label="Aviso de existencias bajas">
+        <div class="notice-row">
+            @Ico("i-alert")
+            <p><strong>Existencias bajas:</strong> @stockBajo @(stockBajo == 1 ? "pieza tiene" : "piezas tienen") dos unidades o menos.</p>
+            <a class="btn-link-quiet" asp-controller="Parts" asp-action="Index">Revisar inventario @Ico("i-arrow")</a>
+        </div>
+    </section>
+}
+
+<section class="section" aria-labelledby="h-kpi">
+    <h2 class="visually-hidden" id="h-kpi">Indicadores del día</h2>
+    <div class="row g-3">
+        <div class="col-12 col-sm-6 col-xl-3">
+            <article class="glass kpi">
+                <span class="kpi-icon t-slate">@Ico("i-wrench")</span>
+                <div><p class="kpi-label">Reparaciones activas</p><p class="kpi-value">@activas</p><p class="kpi-note">@enTaller en taller · @aDomicilio a domicilio</p></div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+            <article class="glass kpi">
+                <span class="kpi-icon t-sage">@Ico("i-check")</span>
+                <div><p class="kpi-label">Listos para entregar</p><p class="kpi-value">@listos</p><p class="kpi-note">@listosConSaldo con saldo pendiente</p></div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+            <article class="glass kpi">
+                <span class="kpi-icon t-sage">@Ico("i-wallet")</span>
+                <div><p class="kpi-label">Cobros de hoy</p><p class="kpi-value">@Bs(cobrosHoy)</p><p class="kpi-note">@pagosHoy pagos registrados</p></div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+            <article class="glass kpi">
+                <span class="kpi-icon t-sand">@Ico("i-receipt")</span>
+                <div><p class="kpi-label">Saldo por cobrar</p><p class="kpi-value">@Bs(saldoPorCobrar)</p><p class="kpi-note">@ordenesConSaldo órdenes con saldo</p></div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section panel" aria-labelledby="h-rep">
+    <div class="panel-head">
+        <h2 id="h-rep">Últimas reparaciones</h2>
+        <div class="tools">
+            <div class="chips" role="group" aria-label="Filtrar por modalidad">
+                <button class="chip" type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+                <button class="chip" type="button" data-filtro="taller" aria-pressed="false">En taller</button>
+                <button class="chip" type="button" data-filtro="domicilio" aria-pressed="false">A domicilio</button>
+            </div>
+            <div class="field">
+                @Ico("i-search")
+                <label class="visually-hidden" for="buscar">Buscar por orden, cliente o equipo</label>
+                <input id="buscar" type="search" placeholder="Buscar orden, cliente o equipo" autocomplete="off">
+            </div>
+        </div>
+    </div>
+
+    @if (!reparaciones.Any())
+    {
+        <div class="empty empty-onboarding"><svg class="ico" aria-hidden="true"><use href="#i-appliance"/></svg><h3>Tu primera reparación empieza aquí</h3><p>Registra un cliente y su equipo para comenzar.</p><a class="btn btn-soft" asp-controller="Customers" asp-action="Edit">Registrar cliente</a></div>
+    }
+    <div class="table-wrap" hidden="@(!reparaciones.Any())">
+        <table class="table repairs">
+            <caption class="visually-hidden">Últimas reparaciones registradas, con modalidad, estado y saldo en bolivianos</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Orden</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Equipo</th>
+                    <th scope="col">Modalidad</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col" class="num">Saldo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var r in reparaciones)
+                {
+                    var domicilio = r.ServiceMode == ServiceMode.Domicilio;
+                    <tr data-modalidad="@(domicilio ? "domicilio" : "taller")">
+                        <td data-label="Orden"><a class="order" asp-controller="Orders" asp-action="Details" asp-route-id="@r.Id">@r.Number</a></td>
+                        <td data-label="Cliente"><span class="person">@r.Equipment!.Customer!.Name</span></td>
+                        <td data-label="Equipo">@(r.Equipment!.Type + " " + r.Equipment.Brand + " " + r.Equipment.Model)</td>
+                        <td data-label="Modalidad">
+                            @if (domicilio)
+                            {
+                                <div class="cell"><span class="mod mod-dom">@Ico("i-pin")A domicilio</span><small class="sub">@r.ServiceAddress</small></div>
+                            }
+                            else
+                            {
+                                <span class="mod mod-taller">@Ico("i-store")En taller</span>
+                            }
+                        </td>
+                        <td data-label="Estado"><partial name="_Estado" model="r.Status" /></td>
+                        <td data-label="Saldo" class="num">
+                            @if (r.Balance == 0 && r.Total > 0 && r.BudgetApproved && r.Status != RepairStatus.Cancelado)
+                            {
+                                <div class="cell"><span class="money">@Bs(r.Balance)</span><span class="paid">@Ico("i-check")Pagado</span></div>
+                            }
+                            else
+                            {
+                                <span class="money">@Bs(r.Balance)</span>
+                                @if (r.Total == 0 && !r.BudgetApproved) { <small class="sub">Sin presupuesto</small> }
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <p class="empty" id="sinResultados" hidden>No hay reparaciones que coincidan con el filtro o la búsqueda.</p>
+
+    <div class="panel-foot">
+        <p id="conteo" aria-live="polite">Mostrando @reparaciones.Count de @reparaciones.Count reparaciones recientes</p>
+        <a class="btn-link-quiet" asp-controller="Orders" asp-action="Index">Ver todas las reparaciones @Ico("i-arrow")</a>
+    </div>
+</section>

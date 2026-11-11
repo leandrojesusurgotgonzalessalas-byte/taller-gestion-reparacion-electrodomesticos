@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="281B0F5F-8A59-D683-4298-659F545771E2" containerWithKeyObject="302F1748-51A8-680A-DE3A-9C2ECAB25E26" localFKIndex="62D9B12D-C0D7-BCDE-B01D-3D3B5BDC84B1" name="FK_OrdenRepuestos_Repuestos_PartId">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:02 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<referredTableLongName>Repuestos</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4823D521-D8B0-84C4-70B4-516D8CD311A3</referredTableID>
+<keyObject>E3DD8E81-EEB6-9D50-CFE7-EFF285C630C7</keyObject>
+<referredKeyID>E3DD8E81-EEB6-9D50-CFE7-EFF285C630C7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

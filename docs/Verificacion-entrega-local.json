@@ -1,0 +1,16 @@
+{
+  "FechaLocal": "2026-10-14",
+  "Entrada": "http://127.0.0.1:7180",
+  "Web": {
+    "application": "Taller.Web",
+    "database": "TallerElectrodomesticos",
+    "status": "ok"
+  },
+  "YARP": {
+    "application": "Taller.Gateway",
+    "status": "ok"
+  },
+  "CMD": "Correcto, incluido inicio con Windows PowerShell 5.1",
+  "InicioRepetidoSinDuplicar": true,
+  "Respaldo": "TallerElectrodomesticos-20261014-105304.bak"
+}

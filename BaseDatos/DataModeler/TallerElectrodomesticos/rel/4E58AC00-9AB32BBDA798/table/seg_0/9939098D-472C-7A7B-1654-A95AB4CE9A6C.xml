@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9939098D-472C-7A7B-1654-A95AB4CE9A6C" name="HistorialOrdenes">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="76C66819-1A91-6A54-BB7D-DE15A8FE2DBE">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RepairOrderId" id="15B3AF8C-122F-4066-E035-AE3B281E13E0">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3E50C5BF-940A-44A0-F189-E3B05EC197F0" referredColumn="1F064067-A0EE-568F-85CE-E4549B1571E9"/>
+</associations>
+</Column>
+<Column name="Description" id="C3299C3C-1E85-7E0E-3BAF-A45E3035CE50">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>2ADAC536-DE49-AC76-4B6A-54B3FCF26761</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CreatedAt" id="D431A5DE-F475-753E-2280-2C7D5F2CA84F">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<use>0</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<domain>507F51C6-22D8-C23D-550E-ADEF364B1098</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="89F1A8DC-C850-1D24-42E6-E061A28F759A" name="PK_HistorialOrdenes">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="76C66819-1A91-6A54-BB7D-DE15A8FE2DBE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2EDE0D3D-334E-3660-C81F-5CD23FB37A0B" name="IX_HistorialOrdenes_RepairOrderId">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15B3AF8C-122F-4066-E035-AE3B281E13E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AF51A32C-7A7B-2DD4-E23A-7E6FE1F013BB" name="FK_HistorialOrdenes_Ordenes_RepairOrderId">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:02 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15B3AF8C-122F-4066-E035-AE3B281E13E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

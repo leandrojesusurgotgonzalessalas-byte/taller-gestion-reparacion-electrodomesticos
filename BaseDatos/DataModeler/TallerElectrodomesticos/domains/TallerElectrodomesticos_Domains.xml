@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='utf-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="TallerElectrodomesticos_Domains">
+  <domains>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="BIT_0_0_0" id="05925330-378F-025A-005F-5904AA3924C9">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT034</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_40" id="0D1F9DB7-E8A7-2386-7EDE-EEBC909BD379">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>40</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_100" id="1D47A09C-A523-8547-7342-CE1C550CAC9D">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>100</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_60" id="2A62824F-7C93-B4C5-12C7-328EA9892A0B">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>60</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_500" id="2ADAC536-DE49-AC76-4B6A-54B3FCF26761">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>500</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_1500" id="2EF26F6B-27EB-9E27-CD56-80B8B40683F5">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>1500</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="DATETIME2_0_0_0" id="507F51C6-22D8-C23D-550E-ADEF364B1098">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_120" id="61605E55-ABCD-E690-8312-45D4E29067F7">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>120</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_2000" id="61E2890C-31B9-53EB-F3F1-D535204B2574">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>2000</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="BINARY_0_0_8" id="928AF5E7-3A24-5608-62B5-B488DC7C25A0">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>8</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT033</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_200" id="9CF591A8-12E6-A402-A1B2-E9CB4FA4AC2F">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>200</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="DECIMAL_18_2_0" id="9FE4B3C3-7DA4-C030-9E02-53D46A87B47A">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>18</dataTypePrecision>
+      <dataTypeScale>2</dataTypeScale>
+      <dataTypeSize>0</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT026</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_300" id="AD92FD6B-ED91-5244-9BED-2AFC8C1AD6A2">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>300</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="Integer_0_0_0" id="BE2FB12B-9211-4FCF-3CB2-0BFF0202D627">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT011</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_30" id="C55155D9-3DB0-3152-8985-44DDF8C7A393">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>30</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_80" id="E1120D19-FCF7-A730-2514-21DF5622ABC3">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-10-14 14:46:01 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <dataTypePrecision>0</dataTypePrecision>
+      <dataTypeScale>0</dataTypeScale>
+      <dataTypeSize>80</dataTypeSize>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT037</logicalDatatype>
+    </Domain>
+    <Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="8626ABD9-EFEA-AEAA-4552-C499C72AE040">
+      <createdBy>Samira</createdBy>
+      <createdTime>2026-11-06 16:01:52 UTC</createdTime>
+      <ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+      <avTSortOrder>0</avTSortOrder>
+      <fileName>TallerElectrodomesticos_Domains</fileName>
+      <logicalDatatype>LOGDT007</logicalDatatype>
+    </Domain>
+  </domains>
+</DomainFile>

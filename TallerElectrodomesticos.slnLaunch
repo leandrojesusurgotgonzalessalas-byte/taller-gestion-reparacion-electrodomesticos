@@ -1,0 +1,9 @@
+[
+  {
+    "Name": "Taller completo con YARP",
+    "Projects": [
+      { "Path": "src\\Taller.Web\\Taller.Web.csproj", "Action": "Start", "DebugTarget": "Taller.Web" },
+      { "Path": "src\\Taller.Gateway\\Taller.Gateway.csproj", "Action": "Start", "DebugTarget": "Taller.Gateway" }
+    ]
+  }
+]

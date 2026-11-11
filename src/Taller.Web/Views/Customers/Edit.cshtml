@@ -1,0 +1,10 @@
+@model Customer
+@{ViewData["Title"]=Model.Id==0?"Nuevo cliente":"Editar cliente";}
+<div class="page-head"><div><div class="eyebrow">CLIENTES</div><h1>@ViewData["Title"]</h1></div><a asp-action="Index">Volver →</a></div>
+<section class="panel form-panel"><form method="post" asp-action="Edit" asp-route-id="@(Model.Id==0?(int?)null:Model.Id)"><div asp-validation-summary="All" class="text-danger"></div>
+
+<div class="form-grid"><div class="field"><label asp-for="Name"></label><input asp-for="Name" class="form-control" /><span asp-validation-for="Name" class="text-danger"></span></div>
+<div class="field"><label asp-for="Phone"></label><input asp-for="Phone" class="form-control" /><span asp-validation-for="Phone" class="text-danger"></span></div>
+<div class="field"><label asp-for="Address"></label><input asp-for="Address" class="form-control" /><span asp-validation-for="Address" class="text-danger"></span></div>
+<div class="field"><label asp-for="Email"></label><input asp-for="Email" class="form-control" /><span asp-validation-for="Email" class="text-danger"></span></div>
+</div><div class="form-actions"><button class="btn btn-primary">Guardar cliente</button><a class="btn btn-soft" asp-action="Index">Cancelar</a></div></form></section>

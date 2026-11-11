@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="434FECBA-BE0B-4A54-8C5E-EDE9D1A4EB44" name="Clientes">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="0333424B-9CBF-2456-7D4D-52C46115BFFA">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>BE2FB12B-9211-4FCF-3CB2-0BFF0202D627</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="9F6E0837-01E0-58F3-FEE3-8238A7CD3223">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Phone" id="592C3AED-E751-D7A8-3061-05C8940995D4">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>C55155D9-3DB0-3152-8985-44DDF8C7A393</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Address" id="11C94135-04F3-62C3-4EAE-B523AA834AEE">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>9CF591A8-12E6-A402-A1B2-E9CB4FA4AC2F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Email" id="03181130-FC54-6667-1B51-06042C9940BE">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>1D47A09C-A523-8547-7342-CE1C550CAC9D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Active" id="137EA552-DAC3-4DCB-88A8-0978CDBF770A">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<domain>05925330-378F-025A-005F-5904AA3924C9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="244CA098-8CBC-3CC2-CC55-D9A9429EF360" name="PK_Clientes">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0333424B-9CBF-2456-7D4D-52C46115BFFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AEABF445-2112-84A6-CF81-0D24AC32F15A" name="IX_Clientes_Name">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:01 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F6E0837-01E0-58F3-FEE3-8238A7CD3223"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,25 @@
+{
+  "database": "TallerElectrodomesticos_Pruebas_0536179e08f948db8ddbf3b4ead93174",
+  "completedAt": "2026-10-14T14:43:10.0119887Z",
+  "passed": true,
+  "checks": [
+    "SQL Server: conexi\u00F3n y esquema real",
+    "Rechaza entrega directa desde recibido",
+    "Rechaza uso de stock insuficiente",
+    "Calcula presupuesto con mano de obra y repuestos",
+    "Descuenta existencias exactamente una vez",
+    "Rechaza pago sin presupuesto aprobado",
+    "Rechaza edici\u00F3n concurrente con RowVersion",
+    "Rechaza sobrepago",
+    "Rechaza importe cero",
+    "Rechaza m\u00E1s de dos decimales",
+    "Rechaza entrega con saldo pendiente",
+    "Registra anticipo y calcula saldo",
+    "Cobros simult\u00E1neos conservan el l\u00EDmite del saldo",
+    "Entrega solo al completar reparaci\u00F3n y cobro",
+    "Orden entregada bloquea modificaciones",
+    "Cancelar restituye stock y conserva historial",
+    "Auditor\u00EDa conserva cambios y pagos",
+    "Restricci\u00F3n SQL impide stock negativo"
+  ]
+}

@@ -1,0 +1,12 @@
+@model Equipment
+@{ViewData["Title"]=Model.Id==0?"Nuevo equipo":"Editar equipo";}
+<div class="page-head"><div><div class="eyebrow">EQUIPOS</div><h1>@ViewData["Title"]</h1></div><a asp-action="Index">Volver →</a></div>
+<section class="panel form-panel"><form method="post" asp-action="Edit" asp-route-id="@(Model.Id==0?(int?)null:Model.Id)"><div asp-validation-summary="All" class="text-danger"></div>
+
+<div class="form-grid"><div class="field"><label asp-for="CustomerId"></label><select asp-for="CustomerId" asp-items="ViewBag.Customers" class="form-select"><option value="">Seleccione un cliente</option></select><span asp-validation-for="CustomerId" class="text-danger"></span></div>
+<div class="field"><label asp-for="Type"></label><input asp-for="Type" class="form-control" list="tiposElectrodomesticos" placeholder="Selecciona o escribe el tipo de equipo" autocomplete="off" aria-describedby="ayudaTipoEquipo" /><partial name="_CatalogoElectrodomesticos" model='@("equipos")' /><small id="ayudaTipoEquipo">Escribe para buscar entre los 14 tipos de electrodomésticos, o registra otro tipo.</small><span asp-validation-for="Type" class="text-danger"></span></div>
+<div class="field"><label asp-for="Brand"></label><input asp-for="Brand" class="form-control" /><span asp-validation-for="Brand" class="text-danger"></span></div>
+<div class="field"><label asp-for="Model"></label><input asp-for="Model" class="form-control" /><span asp-validation-for="Model" class="text-danger"></span></div>
+<div class="field"><label asp-for="Serial"></label><input asp-for="Serial" class="form-control" /><span asp-validation-for="Serial" class="text-danger"></span></div>
+<div class="field"><label asp-for="Accessories"></label><textarea asp-for="Accessories" class="form-control" rows="3"></textarea><span asp-validation-for="Accessories" class="text-danger"></span></div>
+</div><div class="form-actions"><button class="btn btn-primary">Guardar equipo</button><a class="btn btn-soft" asp-action="Index">Cancelar</a></div></form></section>

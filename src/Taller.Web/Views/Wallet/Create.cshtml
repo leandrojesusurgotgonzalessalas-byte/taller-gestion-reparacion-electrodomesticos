@@ -1,0 +1,10 @@
+@model Expense
+@{ViewData["Title"]="Registrar egreso";}
+<div class="page-head"><div><div class="eyebrow">CARTERA</div><h1>Registrar egreso</h1><p>Compra o gasto pagado por el taller.</p></div><a asp-action="Index">Volver →</a></div>
+<section class="panel form-panel"><form method="post" asp-action="Create"><div asp-validation-summary="All" class="text-danger"></div><div class="form-grid">
+<div class="field"><label asp-for="Kind"></label><select asp-for="Kind" class="form-select"><option value="0">Compra</option><option value="1">Gasto</option></select></div>
+<div class="field"><label asp-for="Date"></label><input asp-for="Date" class="form-control" /></div>
+<div class="field"><label asp-for="Description"></label><input asp-for="Description" class="form-control" placeholder="Ej.: repuestos, alquiler o transporte" /></div>
+<div class="field"><label asp-for="Amount"></label><input asp-for="Amount" type="number" min="0.01" step="0.01" class="form-control" /></div>
+<div class="field"><label asp-for="Reference"></label><input asp-for="Reference" class="form-control" /></div>
+</div><p>Este registro refleja la salida de dinero. Administra las existencias en Piezas / repuestos.</p><div class="form-actions"><button class="btn btn-primary">Guardar egreso</button><a class="btn btn-soft" asp-action="Index">Cancelar</a></div></form></section>

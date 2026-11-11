@@ -1,0 +1,5 @@
+@model List<Employee>
+@{ViewData["Title"]="Empleados";}
+<div class="page-head"><div><div class="eyebrow">GESTIÓN DEL TALLER</div><h1>Empleados</h1><p>Datos de contacto y seguimiento para el trabajo diario.</p></div><a class="btn btn-primary btn-cta" asp-action="Edit">+ Nuevo empleado</a></div>
+<section class="panel"><form method="get" class="searchbar"><input class="form-control" name="q" value="@ViewBag.Query" placeholder="Buscar por nombre o teléfono…"/><button class="btn btn-soft">Buscar</button><a asp-action="Index">Limpiar</a></form>
+@if(!Model.Any()){<div class="empty"><h3>No hay empleados para mostrar</h3><p>Añade un empleado para comenzar.</p></div>}else{<div class="table-responsive"><table class="table"><thead><tr><th>Nombre</th><th>Teléfono</th><th>Especialidad</th><th></th></tr></thead><tbody>@foreach(var x in Model){<tr><td data-label="Nombre" class="strong">@x.Name</td><td data-label="Teléfono">@x.Phone</td><td data-label="Especialidad">@x.Specialty</td><td data-label="Acciones"><a asp-action="Edit" asp-route-id="@x.Id">Editar →</a></td></tr>}</tbody></table></div>}</section>

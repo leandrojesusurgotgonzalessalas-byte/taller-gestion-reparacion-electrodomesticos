@@ -1,0 +1,382 @@
+{
+  "Clientes": [
+    {
+      "name": "Id",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Name",
+      "type": "nvarchar(100)",
+      "nullable": false
+    },
+    {
+      "name": "Phone",
+      "type": "nvarchar(30)",
+      "nullable": false
+    },
+    {
+      "name": "Address",
+      "type": "nvarchar(200)",
+      "nullable": true
+    },
+    {
+      "name": "Email",
+      "type": "nvarchar(100)",
+      "nullable": true
+    },
+    {
+      "name": "Active",
+      "type": "bit",
+      "nullable": false
+    }
+  ],
+  "Empleados": [
+    {
+      "name": "Id",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Name",
+      "type": "nvarchar(100)",
+      "nullable": false
+    },
+    {
+      "name": "Phone",
+      "type": "nvarchar(30)",
+      "nullable": false
+    },
+    {
+      "name": "Specialty",
+      "type": "nvarchar(100)",
+      "nullable": true
+    },
+    {
+      "name": "Active",
+      "type": "bit",
+      "nullable": false
+    }
+  ],
+  "Proveedores": [
+    {
+      "name": "Id",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Name",
+      "type": "nvarchar(120)",
+      "nullable": false
+    },
+    {
+      "name": "Phone",
+      "type": "nvarchar(30)",
+      "nullable": false
+    },
+    {
+      "name": "Address",
+      "type": "nvarchar(200)",
+      "nullable": true
+    },
+    {
+      "name": "Contact",
+      "type": "nvarchar(100)",
+      "nullable": true
+    },
+    {
+      "name": "Active",
+      "type": "bit",
+      "nullable": false
+    }
+  ],
+  "Equipos": [
+    {
+      "name": "Id",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "CustomerId",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Type",
+      "type": "nvarchar(60)",
+      "nullable": false
+    },
+    {
+      "name": "Brand",
+      "type": "nvarchar(60)",
+      "nullable": false
+    },
+    {
+      "name": "Model",
+      "type": "nvarchar(80)",
+      "nullable": true
+    },
+    {
+      "name": "Serial",
+      "type": "nvarchar(100)",
+      "nullable": true
+    },
+    {
+      "name": "Accessories",
+      "type": "nvarchar(300)",
+      "nullable": true
+    },
+    {
+      "name": "Active",
+      "type": "bit",
+      "nullable": false
+    }
+  ],
+  "Repuestos": [
+    {
+      "name": "Id",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "SupplierId",
+      "type": "int",
+      "nullable": true
+    },
+    {
+      "name": "Code",
+      "type": "nvarchar(40)",
+      "nullable": false
+    },
+    {
+      "name": "Name",
+      "type": "nvarchar(120)",
+      "nullable": false
+    },
+    {
+      "name": "Stock",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Price",
+      "type": "decimal(18,2)",
+      "nullable": false
+    },
+    {
+      "name": "Active",
+      "type": "bit",
+      "nullable": false
+    },
+    {
+      "name": "RowVersion",
+      "type": "rowversion",
+      "nullable": false
+    }
+  ],
+  "Ordenes": [
+    {
+      "name": "Id",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "EquipmentId",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "ServiceMode",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "ServiceAddress",
+      "type": "nvarchar(300)",
+      "nullable": true
+    },
+    {
+      "name": "EmployeeId",
+      "type": "int",
+      "nullable": true
+    },
+    {
+      "name": "ReceivedAt",
+      "type": "datetime2",
+      "nullable": false
+    },
+    {
+      "name": "UpdatedAt",
+      "type": "datetime2",
+      "nullable": false
+    },
+    {
+      "name": "DueDate",
+      "type": "datetime2",
+      "nullable": true
+    },
+    {
+      "name": "ReportedFault",
+      "type": "nvarchar(1500)",
+      "nullable": false
+    },
+    {
+      "name": "Diagnosis",
+      "type": "nvarchar(2000)",
+      "nullable": true
+    },
+    {
+      "name": "Technician",
+      "type": "nvarchar(100)",
+      "nullable": true
+    },
+    {
+      "name": "Status",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Labor",
+      "type": "decimal(18,2)",
+      "nullable": false
+    },
+    {
+      "name": "BudgetApproved",
+      "type": "bit",
+      "nullable": false
+    },
+    {
+      "name": "Notes",
+      "type": "nvarchar(2000)",
+      "nullable": true
+    },
+    {
+      "name": "DeliveredAt",
+      "type": "datetime2",
+      "nullable": true
+    },
+    {
+      "name": "RowVersion",
+      "type": "rowversion",
+      "nullable": false
+    }
+  ],
+  "HistorialOrdenes": [
+    {
+      "name": "Id",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "RepairOrderId",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Description",
+      "type": "nvarchar(500)",
+      "nullable": false
+    },
+    {
+      "name": "CreatedAt",
+      "type": "datetime2",
+      "nullable": false
+    }
+  ],
+  "OrdenRepuestos": [
+    {
+      "name": "Id",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "RepairOrderId",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "PartId",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Quantity",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "UnitPrice",
+      "type": "decimal(18,2)",
+      "nullable": false
+    }
+  ],
+  "Pagos": [
+    {
+      "name": "Id",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "RepairOrderId",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Amount",
+      "type": "decimal(18,2)",
+      "nullable": false
+    },
+    {
+      "name": "Method",
+      "type": "nvarchar(30)",
+      "nullable": false
+    },
+    {
+      "name": "Reference",
+      "type": "nvarchar(100)",
+      "nullable": true
+    },
+    {
+      "name": "PaidAt",
+      "type": "datetime2",
+      "nullable": false
+    }
+  ],
+  "Egresos": [
+    {
+      "name": "Id",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Description",
+      "type": "nvarchar(200)",
+      "nullable": false
+    },
+    {
+      "name": "Kind",
+      "type": "int",
+      "nullable": false
+    },
+    {
+      "name": "Amount",
+      "type": "decimal(18,2)",
+      "nullable": false
+    },
+    {
+      "name": "Date",
+      "type": "date",
+      "nullable": false
+    },
+    {
+      "name": "Reference",
+      "type": "nvarchar(100)",
+      "nullable": true
+    },
+    {
+      "name": "CreatedAt",
+      "type": "datetime2",
+      "nullable": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+@model WalletSummary
+@{ViewData["Title"]="Cartera";}
+<div class="page-head"><div><div class="eyebrow">MOVIMIENTOS DEL TALLER</div><h1>Cartera</h1><p>Ingresos cobrados, compras y gastos.</p></div><a class="btn btn-primary btn-cta" asp-action="Create">+ Registrar egreso</a></div>
+<section class="panel section"><form method="get" class="searchbar"><div><label for="from">Desde</label><input id="from" name="from" type="date" value="@Model.From?.ToString("yyyy-MM-dd")" class="form-control" /></div><div><label for="to">Hasta</label><input id="to" name="to" type="date" value="@Model.To?.ToString("yyyy-MM-dd")" class="form-control" /></div><button class="btn btn-soft">Filtrar</button><a asp-action="Index">Ver todo</a></form><div asp-validation-summary="All" class="text-danger"></div></section>
+<section class="section"><div class="row g-3">
+<div class="col-12 col-md-4"><article class="glass kpi"><div><p class="kpi-label">Ingresos · órdenes de trabajo</p><p class="kpi-value">@Labels.Money(Model.Income)</p><p class="kpi-note">Pagos y anticipos recibidos</p></div></article></div>
+<div class="col-12 col-md-4"><article class="glass kpi"><div><p class="kpi-label">Egresos · compras y gastos</p><p class="kpi-value">@Labels.Money(Model.Expenses)</p><p class="kpi-note">Salidas de dinero registradas</p></div></article></div>
+<div class="col-12 col-md-4"><article class="glass kpi"><div><p class="kpi-label">Balance neto · total</p><p class="kpi-value">@Labels.Money(Model.Net)</p><p class="kpi-note">Ingresos menos egresos</p></div></article></div>
+</div></section>
+<section class="panel"><h2>Movimientos</h2><p>Los ingresos se incorporan al registrar un pago en una orden. Los presupuestos pendientes de cobro no suman al balance. Sin filtros se muestra todo el historial.</p>
+@if(!Model.Movements.Any()){<div class="empty"><h3>No hay movimientos para mostrar</h3><p>Registra un cobro en una orden o una compra o gasto en cartera.</p></div>}else{
+<div class="table-responsive"><table class="table"><thead><tr><th>Fecha</th><th>Tipo</th><th>Concepto</th><th>Referencia</th><th>Ingreso</th><th>Egreso</th></tr></thead><tbody>
+@foreach(var x in Model.Movements){<tr><td data-label="Fecha">@x.Date.ToString("dd/MM/yyyy")</td><td data-label="Tipo">@x.Type</td><td data-label="Concepto">@if(x.OrderId.HasValue){<a asp-controller="Orders" asp-action="Details" asp-route-id="@x.OrderId">@x.Description</a>}else{@x.Description}</td><td data-label="Referencia">@(x.Reference??"—")</td><td data-label="Ingreso">@(x.Income>0?Labels.Money(x.Income):"—")</td><td data-label="Egreso">@(x.Expense>0?Labels.Money(x.Expense):"—")</td></tr>}
+</tbody></table></div>}
+</section>

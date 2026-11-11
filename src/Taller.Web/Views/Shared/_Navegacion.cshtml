@@ -1,0 +1,29 @@
+@* Menú principal. Se renderiza dos veces (barra lateral y menú móvil), por eso no lleva id.
+   Los controladores corresponden a las rutas MVC existentes. *@
+@{
+    var actual = ViewContext.RouteData.Values["controller"]?.ToString() ?? "Home";
+    var items = new (string Texto, string Controlador, string Icono)[]
+    {
+        ("Inicio",             "Home",           "i-home"),
+        ("Cartera",            "Wallet",         "i-wallet"),
+        ("Reparaciones",       "Orders",   "i-wrench"),
+        ("Clientes",           "Customers",       "i-users"),
+        ("Equipos",            "Equipment",        "i-appliance"),
+        ("Piezas / repuestos", "Parts",         "i-box"),
+        ("Empleados",          "Employees",      "i-badge"),
+        ("Proveedores",        "Suppliers",    "i-truck")
+    };
+}
+<nav aria-label="Secciones del sistema">
+    <ul class="nav-side">
+        @foreach (var it in items)
+        {
+            var activo = string.Equals(actual, it.Controlador, StringComparison.OrdinalIgnoreCase);
+            <li>
+                <a asp-controller="@it.Controlador" asp-action="Index" aria-current="@(activo ? "page" : null)">
+                    <svg class="ico" aria-hidden="true"><use href="#@it.Icono"/></svg>@it.Texto
+                </a>
+            </li>
+        }
+    </ul>
+</nav>

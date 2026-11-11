@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1930 1680" width="1930" height="1680">
+<rect width="1930" height="1680" fill="#f8fafb"/>
+<text x="50" y="1640" font-family="Arial" font-size="18" fill="#567">TALLER DE GESTION DE REPARACION DE ELECTRODOMESTICOS · Modelo lógico · 10 entidades / tablas · 8 relaciones</text>
+<polyline points="420,180 510,180" fill="none" stroke="#268e88" stroke-width="3"/>
+<text x="429" y="172" font-family="Arial" font-size="15" fill="#147d79">1</text><text x="468" y="172" font-family="Arial" font-size="15" fill="#147d79">0..N</text>
+<polyline points="880,200 925,200 925,560 970,560" fill="none" stroke="#268e88" stroke-width="3"/>
+<text x="889" y="192" font-family="Arial" font-size="15" fill="#147d79">1</text><text x="928" y="552" font-family="Arial" font-size="15" fill="#147d79">0..N</text>
+<polyline points="1155,250 1155,430" fill="none" stroke="#268e88" stroke-width="3"/>
+<text x="1164" y="242" font-family="Arial" font-size="15" fill="#147d79">0..1</text><text x="1113" y="422" font-family="Arial" font-size="15" fill="#147d79">0..N</text>
+<polyline points="1340,550 1490,550" fill="none" stroke="#268e88" stroke-width="3"/>
+<text x="1349" y="542" font-family="Arial" font-size="15" fill="#147d79">1</text><text x="1448" y="542" font-family="Arial" font-size="15" fill="#147d79">0..N</text>
+<polyline points="1340,910 1490,910" fill="none" stroke="#268e88" stroke-width="3"/>
+<text x="1349" y="902" font-family="Arial" font-size="15" fill="#147d79">1</text><text x="1448" y="902" font-family="Arial" font-size="15" fill="#147d79">0..N</text>
+<polyline points="1155,952 1155,1300" fill="none" stroke="#268e88" stroke-width="3"/>
+<text x="1164" y="944" font-family="Arial" font-size="15" fill="#147d79">1</text><text x="1113" y="1292" font-family="Arial" font-size="15" fill="#147d79">0..N</text>
+<polyline points="880,1430 970,1430" fill="none" stroke="#268e88" stroke-width="3"/>
+<text x="889" y="1422" font-family="Arial" font-size="15" fill="#147d79">1</text><text x="928" y="1422" font-family="Arial" font-size="15" fill="#147d79">0..N</text>
+<polyline points="420,1430 510,1430" fill="none" stroke="#268e88" stroke-width="3"/>
+<text x="429" y="1422" font-family="Arial" font-size="15" fill="#147d79">0..1</text><text x="468" y="1422" font-family="Arial" font-size="15" fill="#147d79">0..N</text>
+<rect x="50" y="40" width="370" height="236" rx="8" fill="white" stroke="#aac4cc"/><path d="M58 40h354q8 0 8 8v34h-370v-34q0-8 8-8" fill="#173d49"/>
+<text x="68" y="68" fill="white" font-size="19" font-family="Arial" font-weight="bold">Cliente</text>
+<text x="68" y="108" font-size="15" font-family="Arial" fill="#294651">Id PK : Entero</text>
+<text x="68" y="134" font-size="15" font-family="Arial" fill="#294651">Name : Texto</text>
+<text x="68" y="160" font-size="15" font-family="Arial" fill="#294651">Phone : Texto</text>
+<text x="68" y="186" font-size="15" font-family="Arial" fill="#294651">Address : Texto · opcional</text>
+<text x="68" y="212" font-size="15" font-family="Arial" fill="#294651">Email : Texto · opcional</text>
+<text x="68" y="238" font-size="15" font-family="Arial" fill="#294651">Active : Sí / No</text>
+<rect x="970" y="40" width="370" height="210" rx="8" fill="white" stroke="#aac4cc"/><path d="M978 40h354q8 0 8 8v34h-370v-34q0-8 8-8" fill="#173d49"/>
+<text x="988" y="68" fill="white" font-size="19" font-family="Arial" font-weight="bold">Empleado</text>
+<text x="988" y="108" font-size="15" font-family="Arial" fill="#294651">Id PK : Entero</text>
+<text x="988" y="134" font-size="15" font-family="Arial" fill="#294651">Name : Texto</text>
+<text x="988" y="160" font-size="15" font-family="Arial" fill="#294651">Phone : Texto</text>
+<text x="988" y="186" font-size="15" font-family="Arial" fill="#294651">Specialty : Texto · opcional</text>
+<text x="988" y="212" font-size="15" font-family="Arial" fill="#294651">Active : Sí / No</text>
+<rect x="510" y="40" width="370" height="288" rx="8" fill="white" stroke="#aac4cc"/><path d="M518 40h354q8 0 8 8v34h-370v-34q0-8 8-8" fill="#173d49"/>
+<text x="528" y="68" fill="white" font-size="19" font-family="Arial" font-weight="bold">Electrodoméstico</text>
+<text x="528" y="108" font-size="15" font-family="Arial" fill="#294651">Id PK : Entero</text>
+<text x="528" y="134" font-size="15" font-family="Arial" fill="#294651">CustomerId FK : Entero</text>
+<text x="528" y="160" font-size="15" font-family="Arial" fill="#294651">Type : Texto</text>
+<text x="528" y="186" font-size="15" font-family="Arial" fill="#294651">Brand : Texto</text>
+<text x="528" y="212" font-size="15" font-family="Arial" fill="#294651">Model : Texto · opcional</text>
+<text x="528" y="238" font-size="15" font-family="Arial" fill="#294651">Serial : Texto · opcional</text>
+<text x="528" y="264" font-size="15" font-family="Arial" fill="#294651">Accessories : Texto · opcional</text>
+<text x="528" y="290" font-size="15" font-family="Arial" fill="#294651">Active : Sí / No</text>
+<rect x="1490" y="800" width="370" height="184" rx="8" fill="white" stroke="#aac4cc"/><path d="M1498 800h354q8 0 8 8v34h-370v-34q0-8 8-8" fill="#173d49"/>
+<text x="1508" y="828" fill="white" font-size="19" font-family="Arial" font-weight="bold">Evento de orden</text>
+<text x="1508" y="868" font-size="15" font-family="Arial" fill="#294651">Id PK : Entero</text>
+<text x="1508" y="894" font-size="15" font-family="Arial" fill="#294651">RepairOrderId FK : Entero</text>
+<text x="1508" y="920" font-size="15" font-family="Arial" fill="#294651">Description : Texto</text>
+<text x="1508" y="946" font-size="15" font-family="Arial" fill="#294651">CreatedAt : Fecha</text>
+<rect x="970" y="430" width="370" height="522" rx="8" fill="white" stroke="#aac4cc"/><path d="M978 430h354q8 0 8 8v34h-370v-34q0-8 8-8" fill="#173d49"/>
+<text x="988" y="458" fill="white" font-size="19" font-family="Arial" font-weight="bold">Orden de reparación</text>
+<text x="988" y="498" font-size="15" font-family="Arial" fill="#294651">Id PK : Entero</text>
+<text x="988" y="524" font-size="15" font-family="Arial" fill="#294651">EquipmentId FK : Entero</text>
+<text x="988" y="550" font-size="15" font-family="Arial" fill="#294651">ServiceMode : Entero</text>
+<text x="988" y="576" font-size="15" font-family="Arial" fill="#294651">ServiceAddress : Texto · opcional</text>
+<text x="988" y="602" font-size="15" font-family="Arial" fill="#294651">EmployeeId FK : Entero · opcional</text>
+<text x="988" y="628" font-size="15" font-family="Arial" fill="#294651">ReceivedAt : Fecha</text>
+<text x="988" y="654" font-size="15" font-family="Arial" fill="#294651">UpdatedAt : Fecha</text>
+<text x="988" y="680" font-size="15" font-family="Arial" fill="#294651">DueDate : Fecha · opcional</text>
+<text x="988" y="706" font-size="15" font-family="Arial" fill="#294651">ReportedFault : Texto</text>
+<text x="988" y="732" font-size="15" font-family="Arial" fill="#294651">Diagnosis : Texto · opcional</text>
+<text x="988" y="758" font-size="15" font-family="Arial" fill="#294651">Technician : Texto · opcional</text>
+<text x="988" y="784" font-size="15" font-family="Arial" fill="#294651">Status : Entero</text>
+<text x="988" y="810" font-size="15" font-family="Arial" fill="#294651">Labor : Importe</text>
+<text x="988" y="836" font-size="15" font-family="Arial" fill="#294651">BudgetApproved : Sí / No</text>
+<text x="988" y="862" font-size="15" font-family="Arial" fill="#294651">Notes : Texto · opcional</text>
+<text x="988" y="888" font-size="15" font-family="Arial" fill="#294651">DeliveredAt : Fecha · opcional</text>
+<text x="988" y="914" font-size="15" font-family="Arial" fill="#294651">RowVersion : Versión</text>
+<rect x="970" y="1300" width="370" height="210" rx="8" fill="white" stroke="#aac4cc"/><path d="M978 1300h354q8 0 8 8v34h-370v-34q0-8 8-8" fill="#173d49"/>
+<text x="988" y="1328" fill="white" font-size="19" font-family="Arial" font-weight="bold">Repuesto utilizado</text>
+<text x="988" y="1368" font-size="15" font-family="Arial" fill="#294651">Id PK : Entero</text>
+<text x="988" y="1394" font-size="15" font-family="Arial" fill="#294651">RepairOrderId FK : Entero</text>
+<text x="988" y="1420" font-size="15" font-family="Arial" fill="#294651">PartId FK : Entero</text>
+<text x="988" y="1446" font-size="15" font-family="Arial" fill="#294651">Quantity : Entero</text>
+<text x="988" y="1472" font-size="15" font-family="Arial" fill="#294651">UnitPrice : Importe</text>
+<rect x="1490" y="430" width="370" height="236" rx="8" fill="white" stroke="#aac4cc"/><path d="M1498 430h354q8 0 8 8v34h-370v-34q0-8 8-8" fill="#173d49"/>
+<text x="1508" y="458" fill="white" font-size="19" font-family="Arial" font-weight="bold">Pago</text>
+<text x="1508" y="498" font-size="15" font-family="Arial" fill="#294651">Id PK : Entero</text>
+<text x="1508" y="524" font-size="15" font-family="Arial" fill="#294651">RepairOrderId FK : Entero</text>
+<text x="1508" y="550" font-size="15" font-family="Arial" fill="#294651">Amount : Importe</text>
+<text x="1508" y="576" font-size="15" font-family="Arial" fill="#294651">Method : Texto</text>
+<text x="1508" y="602" font-size="15" font-family="Arial" fill="#294651">Reference : Texto · opcional</text>
+<text x="1508" y="628" font-size="15" font-family="Arial" fill="#294651">PaidAt : Fecha</text>
+<rect x="50" y="1300" width="370" height="236" rx="8" fill="white" stroke="#aac4cc"/><path d="M58 1300h354q8 0 8 8v34h-370v-34q0-8 8-8" fill="#173d49"/>
+<text x="68" y="1328" fill="white" font-size="19" font-family="Arial" font-weight="bold">Proveedor</text>
+<text x="68" y="1368" font-size="15" font-family="Arial" fill="#294651">Id PK : Entero</text>
+<text x="68" y="1394" font-size="15" font-family="Arial" fill="#294651">Name : Texto</text>
+<text x="68" y="1420" font-size="15" font-family="Arial" fill="#294651">Phone : Texto</text>
+<text x="68" y="1446" font-size="15" font-family="Arial" fill="#294651">Address : Texto · opcional</text>
+<text x="68" y="1472" font-size="15" font-family="Arial" fill="#294651">Contact : Texto · opcional</text>
+<text x="68" y="1498" font-size="15" font-family="Arial" fill="#294651">Active : Sí / No</text>
+<rect x="510" y="1300" width="370" height="288" rx="8" fill="white" stroke="#aac4cc"/><path d="M518 1300h354q8 0 8 8v34h-370v-34q0-8 8-8" fill="#173d49"/>
+<text x="528" y="1328" fill="white" font-size="19" font-family="Arial" font-weight="bold">Repuesto</text>
+<text x="528" y="1368" font-size="15" font-family="Arial" fill="#294651">Id PK : Entero</text>
+<text x="528" y="1394" font-size="15" font-family="Arial" fill="#294651">SupplierId FK : Entero · opcional</text>
+<text x="528" y="1420" font-size="15" font-family="Arial" fill="#294651">Code : Texto</text>
+<text x="528" y="1446" font-size="15" font-family="Arial" fill="#294651">Name : Texto</text>
+<text x="528" y="1472" font-size="15" font-family="Arial" fill="#294651">Stock : Entero</text>
+<text x="528" y="1498" font-size="15" font-family="Arial" fill="#294651">Price : Importe</text>
+<text x="528" y="1524" font-size="15" font-family="Arial" fill="#294651">Active : Sí / No</text>
+<text x="528" y="1550" font-size="15" font-family="Arial" fill="#294651">RowVersion : Versión</text>
+<rect x="50" y="430" width="370" height="262" rx="8" fill="white" stroke="#aac4cc"/>
+<path d="M58 430h354q8 0 8 8v34h-370v-34q0-8 8-8" fill="#173d49"/>
+<text x="68" y="458" fill="white" font-size="19" font-family="Arial" font-weight="bold">Egreso</text>
+<text x="68" y="498" font-size="15" font-family="Arial" fill="#294651">Id PK : Entero</text>
+<text x="68" y="524" font-size="15" font-family="Arial" fill="#294651">Description : Texto</text>
+<text x="68" y="550" font-size="15" font-family="Arial" fill="#294651">Kind : Entero</text>
+<text x="68" y="576" font-size="15" font-family="Arial" fill="#294651">Amount : Importe</text>
+<text x="68" y="602" font-size="15" font-family="Arial" fill="#294651">Date : Fecha</text>
+<text x="68" y="628" font-size="15" font-family="Arial" fill="#294651">Reference : Texto · opcional</text>
+<text x="68" y="654" font-size="15" font-family="Arial" fill="#294651">CreatedAt : Fecha</text>
+</svg>

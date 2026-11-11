@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "database": "TallerElectrodomesticos_PruebasHTTP_206717d61ebd49969fd6bca87b7f1187",
+  "checks": [
+    "Carga página /",
+    "Carga página /Customers",
+    "Carga página /Equipment",
+    "Carga página /Parts",
+    "Carga página /Employees",
+    "Carga página /Suppliers",
+    "Rechaza POST sin token antifalsificación",
+    "Alta de Suppliers",
+    "Alta de Employees",
+    "Alta de Customers",
+    "Alta de equipo relacionado con cliente",
+    "Precio decimal con punto y proveedor relacionado",
+    "Domicilio exige dirección",
+    "Crea reparación a domicilio",
+    "Añade pieza y descuenta inventario",
+    "Asigna empleado y calcula presupuesto decimal exacto",
+    "Pago decimal y saldo exactos",
+    "Transición EnRevision",
+    "Transición EnReparacion",
+    "Transición Reparado",
+    "Entrega bloqueada mientras existe saldo",
+    "Entrega después del cobro completo",
+    "Comprobante incluye domicilio e importes",
+    "Base del negocio conservada sin registros ficticios"
+  ]
+}

@@ -1,0 +1,5 @@
+@model List<Customer>
+@{ViewData["Title"]="Clientes";}
+<div class="page-head"><div><div class="eyebrow">GESTIÓN</div><h1>Clientes</h1><p>Consulta y administra los clientes del taller.</p></div><a class="btn btn-primary btn-cta" asp-action="Edit">+ Nuevo cliente</a></div>
+<section class="panel"><form class="searchbar" method="get"><input class="form-control" name="q" value="@ViewBag.Query" placeholder="Buscar clientes…"/><button class="btn btn-soft">Buscar</button><a asp-action="Index">Limpiar</a></form>
+@if(!Model.Any()){<div class="empty"><h3>No hay clientes para mostrar</h3><p>Registra un cliente o cambia la búsqueda.</p></div>}else{<div class="table-responsive"><table class="table"><thead><tr><th>Nombre</th><th>Teléfono</th><th>Dirección</th><th></th></tr></thead><tbody>@foreach(var x in Model){<tr><td data-label="Nombre" class="strong">@x.Name<small>@x.Email</small></td><td data-label="Teléfono">@x.Phone</td><td data-label="Dirección">@x.Address</td><td data-label="Acciones"><a asp-action="Edit" asp-route-id="@x.Id">Editar →</a></td></tr>}</tbody></table></div>}</section>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="TallerElectrodomesticos" id="C1B8FDC7-5A26-F761-9C9C-51573F66A1C7" version="3.5">
+<createdBy>Samira</createdBy>
+<createdTime>2026-10-14 14:46:00 UTC</createdTime>
+<ownerDesignName>TallerElectrodomesticos</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>C1B8FDC7-5A26-F761-9C9C-51573F66A1C7</designId>
+</OSDM_Design>

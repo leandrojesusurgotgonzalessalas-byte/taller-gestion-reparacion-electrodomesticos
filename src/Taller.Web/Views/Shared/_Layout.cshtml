@@ -1,0 +1,76 @@
+@using System.Globalization
+@{
+    // Si el servidor corre con InvariantGlobalization, la fecha saldrá en inglés:
+    // desactiva <InvariantGlobalization> en el .csproj o formatea la fecha en otro lugar.
+    var ahora = Labels.Local(DateTime.UtcNow);
+    var fecha = ahora.ToString("dddd, d 'de' MMMM 'de' yyyy", new CultureInfo("es-BO"));
+    var titulo = ViewData["Title"] as string;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@(string.IsNullOrWhiteSpace(titulo) ? "" : titulo + " · ")TALLER DE GESTION DE REPARACION DE ELECTRODOMESTICOS</title>
+    <link rel="icon" type="image/x-icon" href="~/branding/taller.ico" asp-append-version="true" />
+    <link rel="icon" type="image/png" sizes="192x192" href="~/branding/taller-192.png" asp-append-version="true" />
+    <link rel="apple-touch-icon" href="~/branding/taller-192.png" asp-append-version="true" />
+    <link rel="stylesheet" href="~/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <partial name="_Iconos" />
+
+    <!-- Navegación lateral (escritorio) -->
+    <aside class="sidebar glass d-none d-lg-flex" aria-label="Navegación principal">
+        <a class="brand" asp-controller="Home" asp-action="Index">
+            <img class="brand-logo" src="~/branding/taller-logo.png" asp-append-version="true" alt="Logo del taller: hogar y electrodomésticos" width="76" height="76" />
+            <span class="brand-text"><strong>Taller</strong><small>Gestión de reparación de electrodomésticos</small></span>
+        </a>
+        <partial name="_Navegacion" />
+    </aside>
+
+    <!-- Menú móvil -->
+    <div class="offcanvas offcanvas-start nav-movil" tabindex="-1" id="navMovil" aria-labelledby="navMovilTitulo">
+        <div class="offcanvas-header">
+            <img class="menu-logo" src="~/branding/taller-logo.png" asp-append-version="true" alt="" width="48" height="48" /><h2 class="offcanvas-title fs-5 fw-bold" id="navMovilTitulo">Menú del taller</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+        </div>
+        <div class="offcanvas-body"><partial name="_Navegacion" /></div>
+    </div>
+
+    <div class="main">
+        <header class="topbar glass">
+            <button class="btn btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navMovil" aria-controls="navMovil">
+                <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg><span>Menú</span>
+            </button>
+            <div class="topbar-system">
+                <img class="system-logo" src="~/branding/taller-logo.png" asp-append-version="true" alt="" width="52" height="52" />
+                <div class="system-title"><small>Sistema de gestión</small>
+                <strong>TALLER DE GESTION DE REPARACION DE ELECTRODOMESTICOS</strong></div>
+            </div>
+            <time class="topbar-date" datetime="@ahora.ToString("yyyy-MM-dd")">
+                <svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg><span class="date-long">@fecha</span><span class="date-short">@ahora.ToString("dd/MM/yyyy")</span>
+            </time>
+        </header>
+
+        <main id="contenido" tabindex="-1">
+            @if (TempData["Success"] is string success)
+            {
+                <div class="alert alert-success feedback" role="status"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>@success</span></div>
+            }
+            @if (TempData["Error"] is string error)
+            {
+                <div class="alert alert-danger feedback" role="alert"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg><span>@error</span></div>
+            }
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
