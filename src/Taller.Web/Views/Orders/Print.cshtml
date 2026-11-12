@@ -1,7 +1,18 @@
 @model RepairOrder
 @{Layout=null;}
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"/><title>Comprobante @Model.Number</title><style>body{font:14px Arial;color:#172c36;max-width:800px;margin:40px auto;padding:20px}h1{font-size:24px}header{border-bottom:3px solid #147d79;display:flex;justify-content:space-between;padding-bottom:18px}section{margin:24px 0}table{width:100%;border-collapse:collapse}th,td{padding:10px;text-align:left;border-bottom:1px solid #ddd}.money{text-align:right}.signatures{display:flex;justify-content:space-between;margin-top:80px}.signatures span{border-top:1px solid #333;padding:12px 50px}button{padding:12px 20px;background:#147d79;color:white;border:0;border-radius:6px;cursor:pointer}p{white-space:pre-wrap}@@media print{button{display:none}body{margin:0;max-width:none}}</style></head><body>
-<button onclick="window.print()">Imprimir / guardar PDF</button><header><div><h1>TALLER DE GESTION DE REPARACION DE ELECTRODOMESTICOS</h1><p>Comprobante de recepción y reparación</p></div><div><h2>@Model.Number</h2><p>@Labels.Local(Model.ReceivedAt).ToString("dd/MM/yyyy HH:mm")</p></div></header>
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"/><title>Comprobante @Model.Number</title><style>body{font:14px Arial;color:#172c36;max-width:800px;margin:40px auto;padding:20px}h1{font-size:24px}header{border-bottom:3px solid #147d79;display:flex;justify-content:space-between;padding-bottom:18px}section{margin:24px 0}table{width:100%;border-collapse:collapse}th,td{padding:10px;text-align:left;border-bottom:1px solid #ddd}.money{text-align:right}.signatures{display:flex;justify-content:space-between;margin-top:80px}.signatures span{border-top:1px solid #333;padding:12px 50px}button{padding:12px 20px;background:#147d79;color:white;border:0;border-radius:6px;cursor:pointer}.print-actions{display:flex;align-items:center;gap:16px;margin-bottom:16px}.print-actions a{color:#175d59;font-weight:bold}p{white-space:pre-wrap}@@media print{.print-actions{display:none}body{margin:0;max-width:none}}</style></head><body>
+<div class="print-actions">
+    @if (Model.Status is not (RepairStatus.Entregado or RepairStatus.Cancelado))
+    {
+        <a asp-action="Details" asp-route-id="@Model.Id" asp-fragment="editar-orden">Editar orden</a>
+    }
+    else
+    {
+        <a asp-action="Details" asp-route-id="@Model.Id">Volver al detalle</a>
+    }
+    <button type="button" onclick="window.print()">Imprimir / guardar PDF</button>
+</div>
+<header><div><h1>TALLER DE GESTION DE REPARACION DE ELECTRODOMESTICOS</h1><p>Comprobante de recepción y reparación</p></div><div><h2>@Model.Number</h2><p>@Labels.Local(Model.ReceivedAt).ToString("dd/MM/yyyy HH:mm")</p></div></header>
 <section><h3>Cliente</h3><p>@Model.Equipment!.Customer!.Name · @Model.Equipment.Customer.Phone<br/>@Model.Equipment.Customer.Address</p><h3>Equipo</h3><p>@Model.Equipment.Type · @Model.Equipment.Brand · @Model.Equipment.Model<br/>Serie: @Model.Equipment.Serial<br/>Accesorios / condición: @Model.Equipment.Accessories</p></section>
 <section><h3>Modalidad: @Model.ServiceMode</h3>@if(Model.ServiceMode==ServiceMode.Domicilio){<p>Dirección: @Model.ServiceAddress</p>}<h3>Falla reportada</h3><p>@Model.ReportedFault</p><h3>Diagnóstico y notas</h3><p>@Model.Diagnosis<br/>@Model.Notes</p><p>Estado: @Labels.Status(Model.Status) · Empleado: @Model.Employee?.Name<br/>Fecha estimada: @Model.DueDate?.ToString("dd/MM/yyyy")</p></section>
 <table><thead><tr><th>Concepto</th><th>Cantidad</th><th class="money">Importe</th></tr></thead><tbody><tr><td>Mano de obra</td><td>1</td><td class="money">@Labels.Money(Model.Labor)</td></tr>@foreach(var p in Model.Parts){<tr><td>@p.Part!.Name</td><td>@p.Quantity</td><td class="money">@Labels.Money(p.Quantity*p.UnitPrice)</td></tr>}</tbody></table>

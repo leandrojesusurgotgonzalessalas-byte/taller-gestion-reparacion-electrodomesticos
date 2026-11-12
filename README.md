@@ -10,6 +10,32 @@ La distribución compilada está en `runtime/publish` y contiene su propio runti
 
 La base real **TallerElectrodomesticos** está en el SQL Server `localhost`, con autenticación Windows. No utiliza Oracle como base de datos. La primera entrega comienza sin datos ficticios.
 
+## Instalar en otra PC (descargado desde GitHub)
+
+El repositorio contiene todo lo necesario para crear la base de datos **vacía**; los datos reales del negocio nunca se suben a GitHub.
+
+Requisitos de la PC nueva (Windows 10/11):
+
+1. **SDK de .NET 9** o superior: https://dotnet.microsoft.com/download/dotnet/9.0
+2. **SQL Server 2019 o posterior**; sirve SQL Server Express gratuito (instancia predeterminada o `SQLEXPRESS`): https://www.microsoft.com/sql-server/sql-server-downloads
+3. Conexión a Internet la primera vez, para descargar los paquetes NuGet.
+
+Pasos:
+
+1. Descargar el repositorio (`git clone` o **Code → Download ZIP** y descomprimir).
+2. Hacer doble clic en **`Instalar.cmd`**.
+
+El instalador comprueba .NET y SQL Server, detecta la instancia (si es SQL Server Express guarda la conexión en `src/Taller.Web/appsettings.Local.json`, archivo propio de esa PC que no se sube a Git), compila la aplicación, crea el acceso directo en el escritorio y abre el taller. En el primer inicio la aplicación crea la base **TallerElectrodomesticos** vacía. Si la base ya existe, no se modifica ni se borra ningún dato.
+
+Otras opciones:
+
+- Indicar el servidor a mano: `powershell -ExecutionPolicy Bypass -File scripts\Instalar.ps1 -Servidor "localhost\SQLEXPRESS"`
+- Crear la base manualmente desde SQL Server Management Studio: ejecutar `BaseDatos/CrearBaseDatos.sql` en un servidor sin la base.
+- Base creada con una versión anterior: aplicar los scripts de `BaseDatos/Migraciones` en orden (son idempotentes).
+- Llevar los datos reales a otra PC: copiar un respaldo de `scripts/Respaldo.ps1` (archivo `.bak`) por un medio privado y restaurarlo en SQL Server. No subir respaldos a GitHub.
+
+Si aparece un error al crear la base, revisar `runtime/Taller.Web.error.log`; normalmente la cuenta de Windows no tiene permiso para crear bases en SQL Server.
+
 ## Flujo diario
 
 1. Registrar al cliente y su electrodoméstico.
@@ -46,7 +72,7 @@ Para volver a compilar y actualizar los ejecutables después de modificar el có
 
 ## SQL Server y documentación
 
-`BaseDatos/CrearBaseDatos.sql` instala el esquema completo en una base nueva. La aplicación inicializa una base nueva mediante EF Core; `EnsureCreated` no actualiza esquemas ya existentes. Los cambios de esquema se versionan con scripts revisables en `BaseDatos/Migraciones`.
+`BaseDatos/CrearBaseDatos.sql` instala el esquema completo (diez tablas, incluida `Egresos` de Cartera) en una base nueva. La aplicación inicializa una base nueva mediante EF Core; `EnsureCreated` no actualiza esquemas ya existentes. Los cambios de esquema se versionan con scripts revisables en `BaseDatos/Migraciones`.
 
 El diseño `BaseDatos/DataModeler/TallerElectrodomesticos.dmd` y su carpeta compañera contienen nueve tablas / entidades y ocho relaciones. Abrirlo en Oracle SQL Developer Data Modeler. Los modelos lógico y físico tienen posiciones y recorridos manuales sin cruces de relaciones. La herramienta solo se usa para documentación.
 
@@ -70,6 +96,6 @@ Las pruebas crean bases temporales con nombres únicos, realizan los recorridos 
 
 ## Historial y referencias
 
-Repositorio Git local en esta carpeta. Los cambios quedan registrados por commits; el registro resumido está en `docs/RegistroTrabajo.md`. No se publicó en GitHub.
+Repositorio Git publicado en https://github.com/leandrojesusurgotgonzalessalas-byte/taller-gestion-reparacion-electrodomesticos. Los cambios quedan registrados por commits; el registro resumido está en `docs/RegistroTrabajo.md`.
 
 Referencias técnicas: [YARP](https://learn.microsoft.com/aspnet/core/fundamentals/servers/yarp/config-files), [EF Core para SQL Server](https://learn.microsoft.com/ef/core/providers/sql-server/), [Perfiles múltiples de Visual Studio](https://learn.microsoft.com/visualstudio/ide/how-to-set-multiple-startup-projects).

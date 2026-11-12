@@ -13,3 +13,5 @@
 Los cambios de código y documentación se registran también en el historial Git. Runtime, registros locales y respaldos están excluidos de Git para no mezclar archivos de ejecución y datos con el código.
 
 8. Nombre visible actualizado por indicación de Leandro: **TALLER DE GESTION DE REPARACION DE ELECTRODOMESTICOS**. Se actualizaron interfaz, comprobantes, documentación e iniciador del escritorio.
+
+9. 10 de noviembre de 2026: instalación en otras PC desde GitHub. Se añadieron `Instalar.cmd` y `scripts/Instalar.ps1` (comprueban .NET y SQL Server, detectan SQL Server Express, compilan y crean la base vacía en el primer inicio), configuración local opcional `appsettings.Local.json`, la tabla `Egresos` en `CrearBaseDatos.sql` y la migración `003_Egresos.sql`. La base existente de la PC original no se modifica.

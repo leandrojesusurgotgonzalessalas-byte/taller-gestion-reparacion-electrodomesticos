@@ -2,6 +2,14 @@
 (function () {
   'use strict';
 
+  document.querySelectorAll('form[data-confirmar-cancelacion]').forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!window.confirm('¿Cancelar la orden ' + form.dataset.confirmarCancelacion + '?')) {
+        event.preventDefault();
+      }
+    });
+  });
+
   // Catálogo de referencia: guarda el nombre real del formulario, sin asignar precio ni existencias.
   var referenciaPieza = document.getElementById('equipoReferenciaPieza');
   var listaPiezas = document.getElementById('piezasElectrodomesticos');

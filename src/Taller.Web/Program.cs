@@ -2,6 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using Taller.Web.Data;
 var builder=WebApplication.CreateBuilder(args);
+// Configuración propia de cada PC (por ejemplo, SQL Server Express). La crea scripts/Instalar.ps1 y no se sube a Git.
+builder.Configuration.AddJsonFile("appsettings.Local.json",optional:true,reloadOnChange:false);
+builder.Configuration.AddEnvironmentVariables();builder.Configuration.AddCommandLine(args); // las variables de entorno y argumentos siguen teniendo prioridad (pruebas)
 builder.Services.AddControllersWithViews(o => {o.Filters.Add(new Microsoft.AspNetCore.Mvc.AutoValidateAntiforgeryTokenAttribute());o.ModelBinderProviders.Insert(0,new Taller.Web.Models.DecimalModelBinderProvider());});
 builder.Services.AddDbContext<TallerDb>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("Taller")));
 builder.Services.AddScoped<Taller.Web.Services.WorkshopService>();

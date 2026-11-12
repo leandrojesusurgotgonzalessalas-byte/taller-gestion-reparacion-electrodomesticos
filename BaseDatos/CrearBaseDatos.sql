@@ -138,6 +138,22 @@ CREATE TABLE [Pagos] (
 GO
 
 
+-- Cartera: compras y gastos del taller (misma definición que src/Taller.Web/Data/WalletSchema.cs).
+CREATE TABLE [Egresos] (
+    [Id] int NOT NULL IDENTITY,
+    [Description] nvarchar(200) NOT NULL,
+    [Kind] int NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [Date] date NOT NULL,
+    [Reference] nvarchar(100) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Egresos] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Egreso_Importe] CHECK ([Amount]>0),
+    CONSTRAINT [CK_Egreso_Tipo] CHECK ([Kind] IN (0,1))
+);
+GO
+
+
 CREATE INDEX [IX_Clientes_Name] ON [Clientes] ([Name]);
 GO
 
@@ -186,4 +202,5 @@ CREATE INDEX [IX_Repuestos_SupplierId] ON [Repuestos] ([SupplierId]);
 GO
 
 
-
+CREATE INDEX [IX_Egresos_Date] ON [Egresos] ([Date]);
+GO

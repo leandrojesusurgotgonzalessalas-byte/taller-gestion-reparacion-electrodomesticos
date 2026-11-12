@@ -128,14 +128,14 @@
                         <td data-label="Modalidad">
                             @if (domicilio)
                             {
-                                <div class="cell"><span class="mod mod-dom">@Ico("i-pin")A domicilio</span><small class="sub">@r.ServiceAddress</small></div>
+                                <div class="cell"><a class="mod mod-dom detail-badge" asp-controller="Orders" asp-action="Details" asp-route-id="@r.Id" aria-label="A domicilio: ver detalles de @r.Number">@Ico("i-pin")A domicilio</a><small class="sub">@r.ServiceAddress</small></div>
                             }
                             else
                             {
-                                <span class="mod mod-taller">@Ico("i-store")En taller</span>
+                                <a class="mod mod-taller detail-badge" asp-controller="Orders" asp-action="Details" asp-route-id="@r.Id" aria-label="En taller: ver detalles de @r.Number">@Ico("i-store")En taller</a>
                             }
                         </td>
-                        <td data-label="Estado"><partial name="_Estado" model="r.Status" /></td>
+                        <td data-label="Estado"><a class="detail-badge" asp-controller="Orders" asp-action="Details" asp-route-id="@r.Id" aria-label="@Labels.Status(r.Status): ver detalles de @r.Number"><partial name="_Estado" model="r.Status" /></a></td>
                         <td data-label="Saldo" class="num">
                             @if (r.Balance == 0 && r.Total > 0 && r.BudgetApproved && r.Status != RepairStatus.Cancelado)
                             {
