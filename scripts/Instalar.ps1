@@ -54,7 +54,7 @@ try {
  Write-Host "Servidor SQL que usará el taller: $Servidor"
 
  if($Servidor -ne 'localhost'){
-  $cadena="Server=$Servidor;Database=TallerElectrodomesticos;Integrated Security=True;TrustServerCertificate=True;Encrypt=True"
+  $cadena="Server=$Servidor;Database=TallerElectrodomesticos_Entrega;Integrated Security=True;TrustServerCertificate=True;Encrypt=True"
   $json=@{ConnectionStrings=@{Taller=$cadena}} | ConvertTo-Json -Depth 3
   [IO.File]::WriteAllText($configLocal,$json,(New-Object System.Text.UTF8Encoding($false)))
   Write-Host "Conexión guardada en src\Taller.Web\appsettings.Local.json (solo para esta PC)."
@@ -73,7 +73,7 @@ try {
  if($SinAbrir){& (Join-Path $PSScriptRoot 'Iniciar.ps1') -NoBrowser} else {& (Join-Path $PSScriptRoot 'Iniciar.ps1')}
 
  Write-Host ''
- Write-Host 'Instalación terminada. Abra el taller en http://127.0.0.1:7180 o con el acceso directo del escritorio.' -ForegroundColor Green
+ Write-Host 'Instalación terminada. Abra el taller en http://127.0.0.1:7580 o con el acceso directo del escritorio.' -ForegroundColor Green
 } catch {
  Write-Host ''
  Write-Host ('ERROR: '+$_.Exception.Message) -ForegroundColor Red

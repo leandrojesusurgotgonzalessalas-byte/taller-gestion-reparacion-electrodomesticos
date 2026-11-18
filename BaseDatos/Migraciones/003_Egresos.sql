@@ -1,6 +1,6 @@
-﻿-- Agrega la tabla de egresos (Cartera) a una base creada antes de ese módulo.
+-- Agrega la tabla de egresos (Cartera) a una base creada antes de ese módulo.
 -- Es idempotente: si la tabla ya existe no cambia nada. La aplicación también la crea al iniciar.
-USE [TallerElectrodomesticos];
+USE [TallerElectrodomesticos_Entrega];
 GO
 IF OBJECT_ID(N'[dbo].[Egresos]', N'U') IS NULL
 BEGIN

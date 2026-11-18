@@ -1,7 +1,7 @@
-﻿-- Esquema inicial. Usar en una base nueva; no sobrescribe datos existentes.
-IF DB_ID(N'TallerElectrodomesticos') IS NULL CREATE DATABASE [TallerElectrodomesticos];
+-- Esquema inicial. Usar en una base nueva; no sobrescribe datos existentes.
+IF DB_ID(N'TallerElectrodomesticos_Entrega') IS NULL CREATE DATABASE [TallerElectrodomesticos_Entrega];
 GO
-USE [TallerElectrodomesticos];
+USE [TallerElectrodomesticos_Entrega];
 GO
 IF OBJECT_ID(N'dbo.Clientes', N'U') IS NOT NULL THROW 50001, 'La base ya contiene el esquema del taller. Use los scripts de migración para actualizar.', 1;
 GO

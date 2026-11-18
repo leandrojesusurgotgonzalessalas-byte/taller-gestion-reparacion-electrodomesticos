@@ -16,7 +16,7 @@ try {
  $estadoSql=Get-Service -Name $servicioSql -ErrorAction SilentlyContinue
  if(-not $estadoSql){throw "No se encontró SQL Server ($servicioSql) en esta PC. Instale SQL Server Express y ejecute Instalar.cmd."}
  if($estadoSql.Status -ne 'Running'){throw "SQL Server está detenido. Inicie el servicio $servicioSql y vuelva a abrir el taller."}
- foreach($item in @(@{Name='Taller.Web';Port=7181;Health='health'},@{Name='Taller.Gateway';Port=7180;Health='gateway-health'})) {
+ foreach($item in @(@{Name='Taller.Web';Port=7581;Health='health'},@{Name='Taller.Gateway';Port=7580;Health='gateway-health'})) {
   $url='http://127.0.0.1:'+ $item.Port +'/'+$item.Health
   if(Get-Health $url $item.Name){continue}
   if(Get-NetTCPConnection -State Listen -LocalPort $item.Port -ErrorAction SilentlyContinue){throw "El puerto $($item.Port) está ocupado por otra aplicación."}
@@ -32,11 +32,11 @@ try {
   }
   if(-not $ready){throw "El inicio de $($item.Name) excedió el tiempo previsto. Consulte runtime."}
  }
- if(-not(Get-Health 'http://127.0.0.1:7180/health' 'Taller.Web')){throw 'YARP no pudo conectar la aplicación con SQL Server.'}
- if(-not $NoBrowser){Start-Process 'http://127.0.0.1:7180'}
- Write-Output 'Taller disponible en http://127.0.0.1:7180'
+ if(-not(Get-Health 'http://127.0.0.1:7580/health' 'Taller.Web')){throw 'YARP no pudo conectar la aplicación con SQL Server.'}
+ if(-not $NoBrowser){Start-Process 'http://127.0.0.1:7580'}
+ Write-Output 'Taller disponible en http://127.0.0.1:7580'
 } catch {
  $_ | Out-String | Set-Content -LiteralPath (Join-Path $runtime 'ultimo-error.txt') -Encoding UTF8
- if(-not $NoBrowser){Add-Type -AssemblyName System.Windows.Forms;[System.Windows.Forms.MessageBox]::Show($_.Exception.Message,'TALLER DE GESTION DE REPARACION DE ELECTRODOMESTICOS') | Out-Null}
+ if(-not $NoBrowser){Add-Type -AssemblyName System.Windows.Forms;[System.Windows.Forms.MessageBox]::Show($_.Exception.Message,'TALLER DE GESTION DE REPARACION DE ELECTRODOMESTICOS - ENTREGA') | Out-Null}
  throw
 } finally {if($acquired){$mutex.ReleaseMutex()};$mutex.Dispose()}

@@ -212,6 +212,14 @@ body::before{
 .badge-st .ico, .mod .ico{ width:1.05rem; height:1.05rem; }
 .detail-badge{ text-decoration:none; border-radius:999px; }
 .detail-badge:hover, .detail-badge:hover .badge-st{ text-decoration:underline; }
+.agenda-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.35rem}
+.agenda-day{min-height:5rem;border:1px solid var(--sage-200);border-radius:.5rem;padding:.35rem}
+.agenda-day a{display:block;margin-top:.3rem;overflow-wrap:anywhere}
+.agenda-today{background:var(--sage-100)}
+.agenda-work{margin-top:.85rem}
+.agenda-track{display:grid;grid-template-columns:repeat(var(--agenda-dias),1fr);background:var(--sage-100);border-radius:.5rem;margin-top:.2rem}
+.agenda-track span{background:var(--sage-800);height:.65rem;border-radius:.5rem}
+@media(max-width:575px){.agenda-calendar{grid-template-columns:1fr}.agenda-day-title,.agenda-empty{display:none}.agenda-day{min-height:0}}
 .st-diag{ background:var(--ui-tone-15); color:var(--ui-tone-16); border-color:var(--ui-tone-17); }
 .st-espera{ background:var(--ui-tone-18); color:var(--ui-tone-19); border-color:var(--sand-300); }
 .st-rep{ background:var(--ui-tone-20); color:var(--ui-tone-21); border-color:var(--ui-tone-22); }

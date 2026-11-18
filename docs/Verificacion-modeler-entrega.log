@@ -1,0 +1,20 @@
+nov. 17, 2026 8:02:53 P.�M. org.apache.sshd.common.util.security.AbstractSecurityProviderRegistrar getOrCreateProvider
+INFO: getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+nov. 17, 2026 8:02:53 P.�M. org.apache.sshd.common.io.DefaultIoServiceFactoryFactory getIoServiceProvider
+INFO: No detected/configured IoServiceFactoryFactory; using Nio2ServiceFactoryFactory
+nov. 17, 2026 8:02:56 P.�M. oracle.dbtools.crest.util.logging.Logger info
+INFO: Oracle SQL Developer Data Modeler
+WARNING: No extension registry present. Loading preferences from user.home
+no removeProperty -- oracle.dbtools.crest.model.design.DesignObject ||  pname=engineerTo  --  java.util.Map
+no removeProperty -- oracle.dbtools.crest.model.design.DesignObject ||  pname=engineerTo  --  java.util.Map
+start load operation - 20:02:58
+start load operation memory  total  248  /memory  fre  150  /used memory  97
+no removeProperty -- oracle.dbtools.crest.model.design.relational.RelationalDesign ||  pname=redirectConnectionStamp  --  oracle.dbtools.crest.imports.DBConnectionStamp
+end load operation - 20:02:59
+end load operation memory  total  248  /memory  fre  126  /used memory  121
+start load operation - 20:02:59
+start load operation memory  total  248  /memory  fre  126  /used memory  121
+no removeProperty -- oracle.dbtools.crest.model.design.logical.Entity ||  pname=foldedAttributesMap  --  java.util.Map
+end load operation - 20:02:59
+end load operation memory  total  248  /memory  fre  120  /used memory  127
+RESULTADO: true true tablas=10 clavesForaneas=8 entidades=10 relaciones=8

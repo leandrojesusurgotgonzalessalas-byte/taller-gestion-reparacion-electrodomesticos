@@ -1,0 +1,90 @@
+@model List<RepairOrder>
+@{
+    ViewData["Title"] = "Agenda";
+    DateTime inicio = ViewBag.Inicio, fin = ViewBag.Fin, hoy = ViewBag.Hoy;
+    string vista = ViewBag.Vista;
+    int? empleado = ViewBag.Empleado;
+    RepairStatus? estado = ViewBag.Estado;
+    ServiceMode? modalidad = ViewBag.Modalidad;
+    var dias = (fin - inicio).Days + 1;
+    var prev = vista == "mes" ? inicio.AddMonths(-1) : inicio.AddDays(-7);
+    var next = fin.AddDays(1);
+    DateTime InicioOrden(RepairOrder o) => Labels.Local(o.ReceivedAt).Date < o.DueDate!.Value.Date
+        ? Labels.Local(o.ReceivedAt).Date : o.DueDate.Value.Date;
+    string Fecha(DateTime d) => d.ToString("yyyy-MM-dd");
+    var programadas = Model.Where(o => o.DueDate.HasValue && o.DueDate.Value.Date >= inicio && InicioOrden(o) <= fin);
+}
+<div class="page-head"><div><div class="eyebrow">PLANIFICACIÓN</div><h1>Agenda</h1><p>Consulta las órdenes abiertas y sus fechas de entrega.</p></div>
+<a class="btn btn-primary" asp-controller="Orders" asp-action="Create">+ Nueva orden</a></div>
+<section class="panel section">
+    <form method="get" class="d-flex flex-wrap gap-3 align-items-end">
+        <div><label for="fecha">Fecha</label><input class="form-control" id="fecha" name="fecha" type="date" value="@Fecha(inicio)" /></div>
+        <div><label for="vista">Vista</label><select class="form-select" id="vista" name="vista">
+            <option value="semana" selected="@(vista == "semana")">Semana</option><option value="mes" selected="@(vista == "mes")">Mes</option>
+        </select></div>
+        <div><label for="empleado">Empleado</label><select class="form-select" id="empleado" name="empleado">
+            <option value="">Todos</option>
+            @foreach(var e in (List<Employee>)ViewBag.Empleados){<option value="@e.Id" selected="@(empleado == e.Id)">@e.Name</option>}
+        </select></div>
+        <div><label for="estado">Estado</label><select class="form-select" id="estado" name="estado">
+            <option value="">Todos</option>
+            @foreach(var s in Enum.GetValues<RepairStatus>().Where(s => s is not (RepairStatus.Cancelado or RepairStatus.Entregado))){<option value="@s" selected="@(estado == s)">@Labels.Status(s)</option>}
+        </select></div>
+        <div><label for="modalidad">Modalidad</label><select class="form-select" id="modalidad" name="modalidad">
+            <option value="">Todas</option>
+            @foreach(var m in Enum.GetValues<ServiceMode>()){<option value="@m" selected="@(modalidad == m)">@(m == ServiceMode.Taller ? "En taller" : "A domicilio")</option>}
+        </select></div>
+        <button class="btn btn-primary">Aplicar</button>
+    </form>
+</section>
+<section class="panel section">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <h2>@inicio.ToString("dd/MM/yyyy") – @fin.ToString("dd/MM/yyyy")</h2>
+        <nav class="d-flex gap-2" aria-label="Periodos de la agenda">
+            <a class="btn btn-soft" asp-route-fecha="@Fecha(prev)" asp-route-vista="@vista" asp-route-empleado="@empleado" asp-route-estado="@estado" asp-route-modalidad="@modalidad">Anterior</a>
+            <a class="btn btn-soft" asp-route-fecha="@Fecha(hoy)" asp-route-vista="@vista" asp-route-empleado="@empleado" asp-route-estado="@estado" asp-route-modalidad="@modalidad">Hoy</a>
+            <a class="btn btn-soft" asp-route-fecha="@Fecha(next)" asp-route-vista="@vista" asp-route-empleado="@empleado" asp-route-estado="@estado" asp-route-modalidad="@modalidad">Siguiente</a>
+        </nav>
+    </div>
+    <div class="agenda-calendar mt-3">
+        @foreach(var nombre in new[]{"Lun","Mar","Mié","Jue","Vie","Sáb","Dom"}){<strong class="agenda-day-title">@nombre</strong>}
+        @for(var i=0;i<((int)inicio.DayOfWeek+6)%7;i++){<div class="agenda-empty" aria-hidden="true"></div>}
+        @for(var i=0;i<dias;i++)
+        {
+            var fecha = inicio.AddDays(i);
+            <div class="agenda-day @(fecha == hoy ? "agenda-today" : "")">
+                <time datetime="@Fecha(fecha)">@fecha.ToString("dd MMM")</time>
+                @foreach(var o in Model.Where(o => o.DueDate?.Date == fecha))
+                {
+                    <a asp-controller="Orders" asp-action="Details" asp-route-id="@o.Id">@o.Number · @o.Equipment?.Type</a>
+                }
+            </div>
+        }
+    </div>
+</section>
+<section class="panel section">
+    <h2>Cronograma de trabajos</h2>
+    <p>La barra va desde la recepción hasta la entrega estimada. Las órdenes se abren al pulsar su número.</p>
+    @foreach(var o in programadas)
+    {
+        var inicioBarra = InicioOrden(o) < inicio ? inicio : InicioOrden(o);
+        var finBarra = o.DueDate!.Value.Date > fin ? fin : o.DueDate.Value.Date;
+        var columna = (inicioBarra-inicio).Days+1;
+        var duracion = (finBarra-inicioBarra).Days+1;
+        <div class="agenda-work">
+            <div><a asp-controller="Orders" asp-action="Details" asp-route-id="@o.Id">@o.Number</a> · @o.Equipment?.Type · @(o.Employee?.Name ?? "Sin asignar")
+            <small> · @InicioOrden(o).ToString("dd/MM") al @o.DueDate.Value.ToString("dd/MM")</small></div>
+            <div class="agenda-track" style="--agenda-dias:@dias" aria-hidden="true"><span style="grid-column:@columna / span @duracion"></span></div>
+        </div>
+    }
+    @if(!programadas.Any()){<p>No hay trabajos programados en este período.</p>}
+</section>
+@foreach(var grupo in new[]{(Titulo:"Vencidos", Ordenes:Model.Where(o => o.DueDate?.Date < hoy)), (Titulo:"Por programar", Ordenes:Model.Where(o => !o.DueDate.HasValue))})
+{
+    <section class="panel section"><h2>@grupo.Titulo</h2>
+        @if(!grupo.Ordenes.Any()){<p>No hay órdenes para mostrar.</p>}
+        else {<ul>
+            @foreach(var o in grupo.Ordenes){<li><a asp-controller="Orders" asp-action="Details" asp-route-id="@o.Id">@o.Number</a> · @o.Equipment?.Type · @Labels.Status(o.Status) @o.DueDate?.ToString("dd/MM/yyyy")</li>}
+        </ul>}
+    </section>
+}

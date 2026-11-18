@@ -1,7 +1,7 @@
-$ErrorActionPreference='Stop'
+﻿$ErrorActionPreference='Stop'
 $projectRoot=[IO.Path]::GetFullPath((Split-Path $PSScriptRoot -Parent))
 $desktopPath=[Environment]::GetFolderPath('Desktop')
-$title='TALLER DE GESTION DE REPARACION DE ELECTRODOMESTICOS'
+$title='TALLER DE GESTION DE REPARACION DE ELECTRODOMESTICOS - ENTREGA'
 $icon=Join-Path $projectRoot 'src\Taller.Web\wwwroot\branding\taller.ico'
 $launcher=Join-Path $projectRoot 'Iniciar.cmd'
 if(-not(Test-Path -LiteralPath $icon) -or -not(Test-Path -LiteralPath $launcher)){throw 'Falta el icono o el iniciador del taller.'}

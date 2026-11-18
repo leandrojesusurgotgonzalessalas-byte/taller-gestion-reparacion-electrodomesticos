@@ -3,7 +3,7 @@
     "Taller.Gateway": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://127.0.0.1:7280",
+      "applicationUrl": "http://127.0.0.1:7680",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

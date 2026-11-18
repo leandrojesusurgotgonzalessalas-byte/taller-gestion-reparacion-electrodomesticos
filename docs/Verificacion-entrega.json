@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "database": "TallerElectrodomesticos_Entrega",
+  "tables": 10,
+  "foreignKeys": 8,
+  "logicalEntities": 10,
+  "logicalRelationships": 8,
+  "connectorCrossings": 0,
+  "overlappingTables": 0,
+  "databaseOrders": 0
+}

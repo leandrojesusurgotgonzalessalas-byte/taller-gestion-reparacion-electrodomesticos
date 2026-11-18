@@ -16,6 +16,6 @@ Set-Acl -LiteralPath $dest -AclObject $acl
 $stamp=Get-Date -Format 'yyyyMMdd-HHmmss'
 $backupFile=Join-Path $dest "TallerElectrodomesticos-$stamp.bak"
 $sqlPath=$backupFile.Replace("'","''")
-& sqlcmd -S $servidor -E -b -Q "BACKUP DATABASE [TallerElectrodomesticos] TO DISK=N'$sqlPath' WITH COPY_ONLY, CHECKSUM; RESTORE VERIFYONLY FROM DISK=N'$sqlPath' WITH CHECKSUM;"
+& sqlcmd -S $servidor -E -b -Q "BACKUP DATABASE [TallerElectrodomesticos_Entrega] TO DISK=N'$sqlPath' WITH COPY_ONLY, CHECKSUM; RESTORE VERIFYONLY FROM DISK=N'$sqlPath' WITH CHECKSUM;"
 if($LASTEXITCODE -ne 0){throw 'SQL Server no pudo crear/verificar el respaldo.'}
 Write-Output "Respaldo verificado: $backupFile"

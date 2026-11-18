@@ -1,4 +1,4 @@
-USE [TallerElectrodomesticos];
+USE [TallerElectrodomesticos_Entrega];
 GO
 IF OBJECT_ID(N'Empleados',N'U') IS NULL CREATE TABLE Empleados(Id int IDENTITY NOT NULL CONSTRAINT PK_Empleados PRIMARY KEY, Name nvarchar(100) NOT NULL, Phone nvarchar(30) NOT NULL, Specialty nvarchar(100) NULL, Active bit NOT NULL);
 IF OBJECT_ID(N'Proveedores',N'U') IS NULL CREATE TABLE Proveedores(Id int IDENTITY NOT NULL CONSTRAINT PK_Proveedores PRIMARY KEY, Name nvarchar(120) NOT NULL, Phone nvarchar(30) NOT NULL, Address nvarchar(200) NULL, Contact nvarchar(100) NULL, Active bit NOT NULL);
